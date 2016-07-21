@@ -1,0 +1,23 @@
+.main-wrapper {
+  width: 100%; }
+  .main-wrapper .options-wrapper {
+    position: relative;
+    width: 35%;
+    margin: 0px auto;
+    border: 1px solid lightgrey;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none; }
+    .main-wrapper .options-wrapper .option-icon {
+      position: absolute;
+      left: -75px;
+      border: 1px solid lightgrey;
+      padding: 10px;
+      top: 0px; }
+    .main-wrapper .options-wrapper .options {
+      color: #000; }
+    .main-wrapper .options-wrapper .right-caret {
+      float: right; }
+  .main-wrapper .options-wrapper:hover {
+    background: lightgrey; }

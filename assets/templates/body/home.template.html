@@ -1,0 +1,8 @@
+<ul class="main-wrapper">
+
+	<li *ngFor="let option of home_options" class="options-wrapper" [routerLink]="[option]">
+		<span class="option-icon"> ICON </span>
+		<span class="options">{{option}}</span>
+		<span class="right-caret"> ></span>
+	</li>
+</ul>
