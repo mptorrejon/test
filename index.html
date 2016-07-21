@@ -21,7 +21,19 @@
 	  	</script>
 	</head>
 	<body>
-		<h1>Angular2 - Starter</h1>
-		<my-app>Loading...</my-app>
+		<h1>Angular2 - Progress Bar</h1>
+		<mybody>
+			
+		</mybody>
+		<a [routerLink]="['/PersonalInformation']" class="option">MAU</a>
+		<a [routerLink]="['/EducationalExpererience']" class="option">TOR</a>
+		<router-outlet></router-outlet>
+
+		<!-- <mybody *ngFor="let option of options" class="options-wrapper">
+			<div class="block" >
+				<a [routerLink]="">Home</a>		
+				<span class="right-caret">></span>
+			</div>
+		</mybody> -->
 	</body>
 </html>
