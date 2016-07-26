@@ -1,3 +1,4 @@
-<ul *ngFor"let option of options">
-	<li>{{option}}</li>	
+<ul>
+	<li style="list-style-type:none;" class="submenu-option">Home</li>
+	<li *ngFor="let option of options" class="submenu-option">{{option}}</li>
 </ul>

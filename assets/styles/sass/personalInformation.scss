@@ -1,0 +1,63 @@
+:host {
+	.top-warpper{
+		border-bottom: 1px solid lightgrey;
+		padding: 10px 0px;
+		go-back{
+			font-size: 20px;
+			font-weight: 600;
+			display: inline-block;
+			width: 33%;
+			text-align: center;
+			cursor: pointer;
+			button{
+				border: 1px solid #fff;
+				background: transparent;
+				padding: 5px 15px;
+			}
+			button:hover{
+				border: 1px solid lightgrey;
+			}
+		}
+		this-title{
+			display: inline-block;
+			width: 33%;
+			text-align: center;
+			font-size: 20px;
+		}
+		this-save{
+			width: 33%;
+			display: inline-block;
+			text-align: center;
+			button{
+				padding: 5px 15px;
+				border: 1px solid lightgrey;
+				background: lightgrey;
+			}
+			button:hover{
+				background: #fff;
+			}
+		}
+	}
+	
+	.body-wrapper{
+		padding-top:10px;
+		sub-menu{
+			color: lightgrey;
+			display:inline-block;
+			.submenu-option{
+				padding-bottom: 8px;
+				font-size: 15px;
+				transition: .1s linear;
+			}
+			.submenu-option:hover{
+				color: #000;
+				cursor: pointer;
+				font-size: 17px;
+				transition: .1s linear;
+			}
+		}
+		
+		this-form{}
+		progress-bar{}
+	}
+}

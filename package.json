@@ -11,6 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.9.3",
+    
     "gulp": "^3.9.0",
     "gulp-connect": "^4.1.0",
     "gulp-sass": "^2.3.2",
@@ -18,6 +19,7 @@
     "gulp-tslint": "^3.2.0",
     "gulp-typescript": "^2.13.4",
     "jasmine-core": "2.4.1",
+    "ng2-formly": "^2.0.0-beta.5",
     "superstatic": "^1.2.3",
     "typings": "^0.8.1"
   },

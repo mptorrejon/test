@@ -3,10 +3,11 @@ import {HOME_OPTIONS} from '../constants/homeOptions.constant';
 
 @Component({
 	selector: 'sub-menu',
-	templateUrl: '../../assets/templates/body/subMenu.template.html'
+	templateUrl: '../../assets/templates/body/subMenu.template.html',
+	styleUrls: ['../../assets/styles/css/submenu.css']
 })export class SubMenu{
-	option: Array<string>;
+	options: Array<string>;
 	constructor(){
-		this.option = HOME_OPTIONS;
+		this.options = HOME_OPTIONS;
 	}
 }
