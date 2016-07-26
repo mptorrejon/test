@@ -14,12 +14,8 @@ import {EducationalExperience} from './EducationalExperience.component';
 	directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-	{path: '/PersonalInformation', component: PersonalInformation, useAsDefault:true, as: 'PersonalInformation'},
-	{path: '/EducationalExpererience', component: EducationalExperience, as: 'EducationalExpererience'}/*,
-	{path: '/ProfessionalExpererience', component: ProfessionalExperience},
-	{path: '/EmploymentPreferences', component: EmploymentPreferences},
-	{path: '/GroupsAndAffiliations', component: GroupsAndAffiliations},
-	{path: '/PrivacyAndSettings', component: PrivacyAndSettings}*/
+	{ path: '/Home', component: PersonalInformation, useAsDefault:true, as: 'Home'  }//,
+	// { path: '/About/:id', component: EducationalExperience, as: 'About' }
 ])
 export class Body{
 	options: Array<string>;

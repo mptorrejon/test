@@ -1,9 +1,5 @@
-
-
-
-<!-- <mybody *ngFor="let option of options" class="options-wrapper">
-	<div class="block" >
-		<a [routerLink]="">Home</a>		
-		<span class="right-caret">></span>
-	</div>
-</mybody> -->
+<a [routerLink]="['/Home']">Home</a>
+<a [routerLink]="['/About', {id: 1}]" >About 1</a>
+<a [routerLink]="['/About', {id: 2}]" >About 2</a>
+	
+<router-outlet></router-outlet>

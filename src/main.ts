@@ -5,7 +5,7 @@ import { CONFIG } from './constants/config';
 import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 
 bootstrap( Body, [
-					CONFIG,
-					ROUTER_PROVIDERS
-				] 
+	CONFIG,
+	ROUTER_PROVIDERS
+] 
 );
