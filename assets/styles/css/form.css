@@ -1,12 +1,12 @@
-:host {
-  background: red; }
-
-.form {
+:host .form {
   display: inline-block;
   vertical-align: top;
   border-left: 1px solid lightgrey;
   padding-left: 10px;
   width: 540px; }
-
-.label-dropdown {
-  display: block; }
+  :host .form .dropdown-label {
+    width: 100%; }
+  :host .form .dropdown-label > * {
+    display: block; }
+  :host .form select, :host .form label {
+    display: block; }

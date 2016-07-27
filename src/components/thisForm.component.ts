@@ -5,7 +5,7 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 @Component({
 	selector: 'this-form',
 	directives: [FormlyForm],
-	providers: [FormlyConfig, FormlyMessages],
+	providers: [FormlyConfig, FormlyMessages, FormlyProviders],
 	templateUrl: '../../assets/templates/body/form.template.html',
 	styleUrls: ['../../assets/styles/css/form.css'],
 	
@@ -13,13 +13,17 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 	user = {};
 	userFields;
 	options;
+	AddNewLanguage(){
+		console.log("here");
+	}
 	/*
 		initializes setup for formly-fields
 		In html there should be a data binding key name 'userFields'
 	*/
-	constructor(fc: FormlyConfig){
-			
+	constructor(fc: FormlyConfig, fm:FormlyMessages){
+		
 		['input', 'checkbox','radio', 'select'].forEach((field) => {
+			// console.log(fc);
 			fc.setType({
 				name: field,
 				component: TemplateDirectives[field]
@@ -28,6 +32,7 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 		this.options = {};
 		//sets each field already initialized configuration settings
 		this.userFields = [
+			//firstname
 			{
 				className: "col-xs-4 ",
 				key: 'Firstname',
@@ -36,6 +41,7 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 					label: 'First Name:'
 				}
 			},
+			//lastname
 			{
 				className: "col-xs-4",
 				key: 'Lastname',
@@ -44,6 +50,7 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 					label: "Lastname"
 				}
 			},
+			//Professional Title
 			{
 				className: "col-xs-8",
 				key: 'Title',
@@ -52,6 +59,7 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 					label: "Professional Experience"
 				}
 			},
+			//Location
 			{
 				className: "col-xs-8",
 				key: "Location",
@@ -60,6 +68,7 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 					label: "Location"
 				}
 			},
+			// Checkbox Relocate
 			{
 				className: "col-xs-8",
 				key: "Relocate",
@@ -68,8 +77,9 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 					label: "I am not willing to relocate"
 				}
 			},
+			//Field of Practice
 			{
-				className: "col-xs-4",
+				className: "col-xs-4 dropdown-label",
 				key: "FldPractice",
 				type: "select",
 				templateOptions: {
@@ -94,6 +104,50 @@ import {TemplateDirectives} from 'ng2-formly/templates';
 							name: "OptionC"
 						}
 					]
+				}
+			},
+			// Languages
+			{
+				className: "col-xs-8",
+				template: "<p>Languages</p>"
+			},
+			{
+				className: "row col-xs-8",
+		        fieldGroup: [{
+		          className: "col-xs-6",
+		          type: "input",
+		          key: "street",
+		          templateOptions: {
+		            placeholder: "Language"
+		          }
+		        }, {
+		          className: "col-xs-3",
+		          type: "select",
+		          templateOptions: {
+		          		options: [
+		          			{
+		          				label: "Select One",
+		          				name: "default"
+		          			},
+		          			{
+		          				label: "Spanish",
+		          				name: "spanish"
+		          			},
+		          			{
+		          				label: "Portuguese",
+		          				name: "portuguese"
+		          			}
+		          		]
+		          }
+		        }]
+			},
+			{
+				className: "col-xs-8",
+				template: '<input (click)="callback()">Click me</p>',
+				templateoptions: {
+					callback: () => {
+						console.log('a');
+					}
 				}
 			}
 		]
