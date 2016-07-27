@@ -3,7 +3,7 @@ module.exports = function(){
 		//ts files we are gonna use, TS only?
 		allTs: './src/**/*.ts',
 
-		allStyles: './assets/styles/sass/*.scss',
+		allStyles: './assets/styles/sass/**/*.scss',
 
 		allTemplates: './assets/templates/**/*.html',
 

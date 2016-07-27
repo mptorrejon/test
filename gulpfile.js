@@ -20,7 +20,7 @@ gulp.task('compile-ts', function(){
 });
 
 gulp.task('compile-sass', function(){
-	gulp.src('./assets/styles/sass/*.scss')
+	gulp.src('./assets/styles/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError) )
 	.pipe(gulp.dest('./assets/styles/css/'));
 });
@@ -38,7 +38,7 @@ gulp.task('serve', ['compile-ts', 'compile-sass'], function(){
 	gulp.run
 	browserSync({
 		port: 3003,
-		files: [ 'index.html',outputPath , 'assets/templates/**/*.html', 'assets/styles/sass/*.scss' ],
+		files: [ 'index.html',outputPath , 'assets/templates/**/*.html', 'assets/styles/sass/**/*.scss' ],
 		injectChanges: true,
 		logFileChanges: false,
 		logLevel: 'silent',

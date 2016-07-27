@@ -1,0 +1,28 @@
+:host .header-wrap {
+  width: 100%;
+  background: lightgrey;
+  padding: 15px 10px;
+  position: relative; }
+  :host .header-wrap .header-logo {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px; }
+  :host .header-wrap .search-bar-wrapper {
+    margin-left: 20%; }
+    :host .header-wrap .search-bar-wrapper input {
+      width: 40%;
+      padding: 5px 3px; }
+  :host .header-wrap .user-profile-wrapper {
+    position: absolute;
+    right: 35px; }
+    :host .header-wrap .user-profile-wrapper select {
+      cursor: pointer;
+      background: none;
+      border: none; }
+  :host .header-wrap .hamburguer-wrapper {
+    cursor: pointer;
+    position: absolute;
+    right: 10px; }
