@@ -8,10 +8,6 @@ import {FormlyForm, FormlyConfig, FormlyMessages, FormlyProviders} from 'ng2-for
 	directives: [FormlyForm/*, ROUTER_DIRECTIVES*/],
 	providers: [FormlyConfig, FormlyMessages]
 })export class FormWrapper{
-	block = {};
-	blockFields;
-
-	constructor(fc:FormlyConfig){
-
-	}
+	
+	constructor(fc:FormlyConfig){}
 }
