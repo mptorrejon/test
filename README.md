@@ -2,6 +2,9 @@
 1.	Run npm run-script ts && npm run-script _development_
 	interchange development for production depending on which change you are on.
 2.	Run npm install
+	-  This will install all required modules
+3.  Run npm run-script ts
+	-  This will install typings and make git repo reference NULL.
 
 At this point you should have a folder named:
 *	typings

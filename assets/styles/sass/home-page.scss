@@ -1,52 +1,103 @@
-.home-wrapper{
-	vertical-align: top;
-	.section-title1{
-	  text-align: center;
-	  font-weight: 700;
-	  font-size: 24px;
+:host{
+	session-ctrls{
+		position: relative;
+		display:block;
+		width:100%;
+		padding: 15px 0px;
+		go-back{
+			width:33%;
+			display:inline-block;
+			text-align: center;
+		}
+		this-title{
+			width:33%;
+			display:inline-block;
+			text-align: center;
+		}
+		this-save{
+			width:33%;
+			display:inline-block;
+			text-align: center;
+		}
 	}
-	.section-title2{
-	  text-align:center;
-	  font-size:16px;
-	}
-	.main-wrapper{
-		width: 100%;
-		/* list-style-type: none; */
-		padding: 0px;
-		.options-wrapper{
-			position:relative;
-			width:35%;
-			margin: 0px auto;
-			border: 1px solid lightgrey;
-			margin-bottom: 10px;
-			padding: 10px;
-			cursor: pointer;
-			list-style-type: none;
-			.option-icon{
-				position: absolute;
-				left: -75px;
+	.home-wrapper-main{
+		position: relative;
+		transition: .5s linear;
+		vertical-align: top;
+		.section-title1{
+		  text-align: center;
+		  font-weight: 700;
+		  font-size: 24px;
+		}
+		.section-title2{
+		  text-align:center;
+		  font-size:16px;
+		}
+		.main-wrapper{
+			width: 100%;
+			/* list-style-type: none; */
+			padding: 0px;
+			.options-wrapper{
+				position:relative;
+				width:35%;
+				margin: 0px auto;
 				border: 1px solid lightgrey;
+				margin-bottom: 10px;
 				padding: 10px;
-				top: 0px;
+				cursor: pointer;
+				list-style-type: none;
+				.option-icon{
+					position: absolute;
+					left: -75px;
+					border: 1px solid lightgrey;
+					padding: 10px;
+					top: 0px;
+				}
+				.options{
+					color: #000;
+				}
+				.right-caret{
+					float:right;
+				}
 			}
-			.options{
-				color: #000;
+			.options-wrapper:hover {
+				background: lightgrey;
 			}
-			.right-caret{
-				float:right;
-			}
-		}
-		.options-wrapper:hover {
-			background: lightgrey;
 		}
 	}
-}
-.router-outlet{
-	vertical-align: top;
-}
-.show{
-	display:inline-block;
-}
-.no-show{
-	display: none;
+	.home-wrapper-submenu{
+		transition: .5s linear;
+		display:inline-block;
+		padding: 0px 0px 0px 20px;
+		.section-title1, .section-title2{
+			display: none;
+		}
+		.main-wrapper{
+			width: auto;
+			display: inline-block;
+			.options-wrapper{
+				width: auto;
+				border: none;
+				padding: 0px;
+				.option-icon{
+					display: none;
+				}
+				.options{
+					color: lightgray;
+					transition: .1s linear;
+				}
+				.right-caret{
+					display: none;
+				}
+				.options:hover{
+					transition: .1s linear;
+					font-weight: 600;
+					color: #000;
+				}
+			}
+			.options-wrapper:hover{
+				background: transparent;
+			}
+		}
+	}	
 }

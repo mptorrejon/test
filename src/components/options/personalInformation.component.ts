@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
 
 @Component({
-	template: '<p>This is Personal Information</p>'
+	templateUrl: '../../assets/templates/body/options/personalInformation.template.html'
 })export class PersonalInformation{}

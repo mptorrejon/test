@@ -6,4 +6,7 @@ import { FormlyProviders } from 'ng2-formly';
 bootstrap( AppComponent, [
 	APP_ROUTER_PROVIDERS,
 	FormlyProviders
-]);
+])
+.catch(err=>{
+	console.error(err);
+});

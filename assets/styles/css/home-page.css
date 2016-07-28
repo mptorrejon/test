@@ -1,17 +1,37 @@
-.home-wrapper {
+:host session-ctrls {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 15px 0px; }
+  :host session-ctrls go-back {
+    width: 33%;
+    display: inline-block;
+    text-align: center; }
+  :host session-ctrls this-title {
+    width: 33%;
+    display: inline-block;
+    text-align: center; }
+  :host session-ctrls this-save {
+    width: 33%;
+    display: inline-block;
+    text-align: center; }
+
+:host .home-wrapper-main {
+  position: relative;
+  transition: .5s linear;
   vertical-align: top; }
-  .home-wrapper .section-title1 {
+  :host .home-wrapper-main .section-title1 {
     text-align: center;
     font-weight: 700;
     font-size: 24px; }
-  .home-wrapper .section-title2 {
+  :host .home-wrapper-main .section-title2 {
     text-align: center;
     font-size: 16px; }
-  .home-wrapper .main-wrapper {
+  :host .home-wrapper-main .main-wrapper {
     width: 100%;
     /* list-style-type: none; */
     padding: 0px; }
-    .home-wrapper .main-wrapper .options-wrapper {
+    :host .home-wrapper-main .main-wrapper .options-wrapper {
       position: relative;
       width: 35%;
       margin: 0px auto;
@@ -20,24 +40,42 @@
       padding: 10px;
       cursor: pointer;
       list-style-type: none; }
-      .home-wrapper .main-wrapper .options-wrapper .option-icon {
+      :host .home-wrapper-main .main-wrapper .options-wrapper .option-icon {
         position: absolute;
         left: -75px;
         border: 1px solid lightgrey;
         padding: 10px;
         top: 0px; }
-      .home-wrapper .main-wrapper .options-wrapper .options {
+      :host .home-wrapper-main .main-wrapper .options-wrapper .options {
         color: #000; }
-      .home-wrapper .main-wrapper .options-wrapper .right-caret {
+      :host .home-wrapper-main .main-wrapper .options-wrapper .right-caret {
         float: right; }
-    .home-wrapper .main-wrapper .options-wrapper:hover {
+    :host .home-wrapper-main .main-wrapper .options-wrapper:hover {
       background: lightgrey; }
 
-.router-outlet {
-  vertical-align: top; }
-
-.show {
-  display: inline-block; }
-
-.no-show {
-  display: none; }
+:host .home-wrapper-submenu {
+  transition: .5s linear;
+  display: inline-block;
+  padding: 0px 0px 0px 20px; }
+  :host .home-wrapper-submenu .section-title1, :host .home-wrapper-submenu .section-title2 {
+    display: none; }
+  :host .home-wrapper-submenu .main-wrapper {
+    width: auto;
+    display: inline-block; }
+    :host .home-wrapper-submenu .main-wrapper .options-wrapper {
+      width: auto;
+      border: none;
+      padding: 0px; }
+      :host .home-wrapper-submenu .main-wrapper .options-wrapper .option-icon {
+        display: none; }
+      :host .home-wrapper-submenu .main-wrapper .options-wrapper .options {
+        color: lightgray;
+        transition: .1s linear; }
+      :host .home-wrapper-submenu .main-wrapper .options-wrapper .right-caret {
+        display: none; }
+      :host .home-wrapper-submenu .main-wrapper .options-wrapper .options:hover {
+        transition: .1s linear;
+        font-weight: 600;
+        color: #000; }
+    :host .home-wrapper-submenu .main-wrapper .options-wrapper:hover {
+      background: transparent; }

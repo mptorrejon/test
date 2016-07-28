@@ -6,8 +6,7 @@ import { ThisTitle } from '../thisTitle.component';
 import { ThisSave } from '../thisSave.component';
 
 @Component({
-	selector:'educational-experience',
 	templateUrl: '../../assets/templates/body/options/educationalExperience.template.html',
-	styleUrls: ['../../assets/styles/css/personalInformation.css'],
-	directives: [SubMenu, GoBack, ThisTitle, ThisSave, ThisForm]
+	// styleUrls: ['../../assets/styles/css/personalInformation.css'],
+	// directives: [SubMenu, GoBack, ThisTitle, ThisSave, ThisForm]
 }) export class EducationalExperience{}
