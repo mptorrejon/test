@@ -79,6 +79,12 @@
       :host .home-wrapper-submenu .main-wrapper .options-wrapper .options {
         color: lightgray;
         transition: .1s linear; }
+      :host .home-wrapper-submenu .main-wrapper .options-wrapper .active {
+        color: #000;
+        font-weight: 600; }
+      :host .home-wrapper-submenu .main-wrapper .options-wrapper .disable {
+        color: lightgrey;
+        font-weight: normal; }
       :host .home-wrapper-submenu .main-wrapper .options-wrapper .right-caret {
         display: none; }
       :host .home-wrapper-submenu .main-wrapper .options-wrapper .options:hover {

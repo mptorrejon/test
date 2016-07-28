@@ -9,11 +9,14 @@
 		<li *ngFor="let option of home_options" 
 			class="options-wrapper" 
 			[routerLink]="[option]"
-			(click)="showRouterOutlet($event)"
 		>
-
 			<span class="option-icon"> ICON </span>
-			<span class="options">{{option}}</span>
+			<span 
+				class="options" 
+				(click)="showRouterOutlet($event)"
+			>
+				{{option}}
+			</span>
 			<span class="right-caret"> ></span>
 		</li>
 	</ul>
