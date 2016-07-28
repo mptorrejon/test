@@ -1,17 +1,25 @@
-:host session-ctrls {
-  position: relative;
+:host .show-ctrls {
   display: block;
+  transition: .5s linear; }
+
+:host .hide-ctrls {
+  display: none;
+  transition: .5s linear; }
+
+:host .sessionCtrl {
+  position: relative;
   width: 100%;
-  padding: 15px 0px; }
-  :host session-ctrls go-back {
+  padding: 15px 0px;
+  transition: .5s linear; }
+  :host .sessionCtrl go-back {
     width: 33%;
     display: inline-block;
     text-align: center; }
-  :host session-ctrls this-title {
+  :host .sessionCtrl this-title {
     width: 33%;
     display: inline-block;
     text-align: center; }
-  :host session-ctrls this-save {
+  :host .sessionCtrl this-save {
     width: 33%;
     display: inline-block;
     text-align: center; }

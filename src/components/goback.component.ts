@@ -14,8 +14,17 @@ import { AddRemoveClass} from '../services/addRemoveClass.service';
 		this.ARC = ARC;
 	}
 	goBack(){
-		// this.router.navigate([val.target.innerHTML.trim()]);
+		//get el to add/remove class
 		let el = document.getElementsByClassName('home-wrapper-main')[0];
+		//removes class so landing page menu goes back to normal
 		this.ARC.RemoveClass(el, 'home-wrapper-submenu');
+		//gets element for session controller
+		el = document.getElementsByClassName('sessionCtrl-show')[0];
+		//hides session controllers
+		this.ARC.RemoveClass(el, 'show-ctrls');
+		this.ARC.AddClass(el, 'hide-ctrls');
+
+		//set route to home
+		this.router.navigate([ '' ]);
 	}
 }

@@ -1,0 +1,178 @@
+|   .gitignore
+|   file-structure.txt
+|   gulp.config.js
+|   gulpfile.js
+|   index.html
+|   package.json
+|   README.md
+|   system.config.js
+|   tsConfig.json
+|   typings.json
+|   
++---assets
+|   +---styles
+|   |   +---css
+|   |   |   |   block-options.css
+|   |   |   |   form.css
+|   |   |   |   home-page.css
+|   |   |   |   personalInformation.css
+|   |   |   |   submenu.css
+|   |   |   |   
+|   |   |   +---footer
+|   |   |   |       footer.css
+|   |   |   |       
+|   |   |   \---header
+|   |   |           header.css
+|   |   |           
+|   |   \---sass
+|   |       |   block-options.scss
+|   |       |   form.scss
+|   |       |   home-page.scss
+|   |       |   personalInformation.scss
+|   |       |   submenu.scss
+|   |       |   
+|   |       +---footer
+|   |       |       footer.scss
+|   |       |       
+|   |       \---header
+|   |               header.scss
+|   |               
+|   \---templates
+|       +---body
+|       |   |   app.template.html
+|       |   |   form.template.html
+|       |   |   formWrapper.template.html
+|       |   |   goback.template.html
+|       |   |   sessionCtrls.template.html
+|       |   |   subMenu.template.html
+|       |   |   thisSave.template.html
+|       |   |   thisTitle.template.html
+|       |   |   
+|       |   \---options
+|       |           educationalExperience.template.html
+|       |           employmentExperience.template.html
+|       |           groupsAndAfilliations.template.html
+|       |           personalInformation.template.html
+|       |           privacySettings.template.html
+|       |           professionalExperience.template.html
+|       |           
+|       +---footer
+|       |       footer.template.html
+|       |       
+|       \---header
+|               hamburguer.template.html
+|               header.template.html
+|               searchBar.template.html
+|               userProfile.template.html
+|               
++---dev
+|   |   main.js
+|   |   
+|   +---components
+|   |   |   about.component.js
+|   |   |   app.component.js
+|   |   |   app.routes.js
+|   |   |   body.component.js
+|   |   |   formWrapper.component.js
+|   |   |   goback.component.js
+|   |   |   home.component.js
+|   |   |   sessionCtrls.component.js
+|   |   |   subMenu.component.js
+|   |   |   thisForm.component.js
+|   |   |   thisSave.component.js
+|   |   |   thisTitle.component.js
+|   |   |   
+|   |   +---footer
+|   |   |       footer.component.js
+|   |   |       
+|   |   +---header
+|   |   |       hamburguer.component.js
+|   |   |       header.component.js
+|   |   |       searchBar.component.js
+|   |   |       userProfile.component.js
+|   |   |       
+|   |   \---options
+|   |           dummy.component.js
+|   |           educationalExperience.component.js
+|   |           employmentPreferences.component.js
+|   |           groupAfilliations.component.js
+|   |           personalInformation.component.js
+|   |           privacySettings.component.js
+|   |           professionalExperience.component.js
+|   |           
+|   +---constants
+|   |       config.js
+|   |       homeOptions.constant.js
+|   |       homepageOptions.constant.js
+|   |       
+|   \---services
+|           addRemoveClass.service.js
+|           
+|   |   |   |   |       message.js
+|   |   |   |   |       message.js.map
+|   |   |   |   |       dom_element_schema_registry.metadata.json
+|   |   |   |   |       dom_security_schema.d.ts
+|   |   |   |   |       dom_security_schema.js              
++---src
+|   |   main.ts
+|   |   
+|   +---components
+|   |   |   app.component.ts
+|   |   |   app.routes.ts
+|   |   |   formWrapper.component.ts
+|   |   |   goback.component.ts
+|   |   |   sessionCtrls.component.ts
+|   |   |   subMenu.component.ts
+|   |   |   thisForm.component.ts
+|   |   |   thisSave.component.ts
+|   |   |   thisTitle.component.ts
+|   |   |   
+|   |   +---body
+|   |   +---footer
+|   |   |       footer.component.ts
+|   |   |       
+|   |   +---header
+|   |   |       hamburguer.component.ts
+|   |   |       header.component.ts
+|   |   |       searchBar.component.ts
+|   |   |       userProfile.component.ts
+|   |   |       
+|   |   \---options
+|   |           dummy.component.ts
+|   |           educationalExperience.component.ts
+|   |           employmentPreferences.component.ts
+|   |           groupAfilliations.component.ts
+|   |           personalInformation.component.ts
+|   |           privacySettings.component.ts
+|   |           professionalExperience.component.ts
+|   |           
+|   +---constants
+|   |       config.ts
+|   |       homeOptions.constant.ts
+|   |       homepageOptions.constant.ts
+|   |       
+|   \---services
+|           addRemoveClass.service.ts
+|           
+\---typings
+    |   browser.d.ts
+    |   index.d.ts
+    |   main.d.ts
+    |   
+    \---globals
+        +---core-js
+        |       index.d.ts
+        |       typings.json
+        |       
+        +---es6-shim
+        |       index.d.ts
+        |       typings.json
+        |       
+        +---jasmine
+        |       index.d.ts
+        |       typings.json
+        |       
+        \---node
+                index.d.ts
+                typings.json
+                

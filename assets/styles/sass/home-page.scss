@@ -1,9 +1,17 @@
 :host{
-	session-ctrls{
+	.show-ctrls{
+		display: block;
+		transition: .5s linear;
+	}
+	.hide-ctrls{
+		display: none;
+		transition: .5s linear;
+	}
+	.sessionCtrl{
 		position: relative;
-		display:block;
 		width:100%;
 		padding: 15px 0px;
+		transition: .5s linear;
 		go-back{
 			width:33%;
 			display:inline-block;
@@ -83,7 +91,7 @@
 					display: none;
 				}
 				.options{
-					color: lightgray;
+				color: lightgray;
 					transition: .1s linear;
 				}
 				.right-caret{

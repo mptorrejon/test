@@ -25,12 +25,16 @@ export class AppComponent {
 	showRouterOutlet(e){
 		let el = document.getElementsByClassName('home-wrapper-main')[0];
 		this.ARC.AddClass(el, 'home-wrapper-submenu');
+
+		el = document.getElementsByClassName('sessionCtrl')[0];
+		console.log(el);
+		this.ARC.AddClass(el, 'show-ctrls');
 	}
 	/*
 		Use this for testing, until routing refresh is figured out.
 	*/
 	ngOnInit(){
-		let el = document.getElementsByClassName('home-wrapper-main')[0];
-		this.ARC.AddClass(el, 'home-wrapper-submenu');	
+		// let el = document.getElementsByClassName('home-wrapper-main')[0];
+		// this.ARC.AddClass(el, 'home-wrapper-submenu');	
 	}
 }
