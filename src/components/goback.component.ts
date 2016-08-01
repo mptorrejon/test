@@ -19,7 +19,7 @@ import { AddRemoveClass} from '../services/addRemoveClass.service';
 		//removes class so landing page menu goes back to normal
 		this.ARC.RemoveClass(el, 'home-wrapper-submenu');
 		//gets element for session controller
-		el = document.getElementsByClassName('sessionCtrl-show')[0];
+		el = document.getElementsByClassName('sessionCtrl')[0];
 		//hides session controllers
 		this.ARC.RemoveClass(el, 'show-ctrls');
 		this.ARC.AddClass(el, 'hide-ctrls');

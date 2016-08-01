@@ -11,6 +11,7 @@
         '@angular2-material/toolbar': 'node_modules/@angular2-material/toolbar',
         'app': './dev', //this could change to pickup the main js
         'rxjs': 'node_modules/rxjs',
+        // 'BehaviorSubject': 'node_modules/rxjs/BehaviorSubject.js',
         'symbol-observable': 'node_modules/symbol-observable',
         '@angular': 'node_modules/@angular',
         'immutable': 'node_modules/immutable/dist/immutable.js',
@@ -26,6 +27,7 @@
         '@angular2-material/toolbar': { main: 'toolbar.js', defaultExtension: 'js'},
         'app': { main: 'main.js', defaultExtension: 'js' },
         'rxjs': {defaultExtension: 'js' },
+        // 'BehaviorSubject': { defaultExtension:'js' },
         'symbol-observable': { main: 'index.js', defaultExtension: 'js' },
         '@angular/common': { main: 'index.js', defaultExtension: 'js' },
         '@angular/compiler': { main: 'index.js', defaultExtension: 'js' },
