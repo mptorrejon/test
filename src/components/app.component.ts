@@ -5,13 +5,13 @@ import { Body } from './body.component';
 import { Header } from './header/header.component';
 import { Footer } from './footer/footer.component';
 import { SessionCtrls } from './sessionCtrls.component';
-// import { TitleService } from '../services/thisTitle.service';
+import { TitleService } from '../services/thisTitle.service';
 
 @Component({
 	selector: 'landing-site',
 	templateUrl: '../../assets/templates/body/app.template.html',
 	directives: [ ROUTER_DIRECTIVES, Header, Footer, SessionCtrls, Body ],
-	providers: [ AddRemoveClass ],
+	providers: [ AddRemoveClass, TitleService ],
 	styleUrls: ['../../assets/styles/css/home-page.css']
 })
 export class AppComponent {

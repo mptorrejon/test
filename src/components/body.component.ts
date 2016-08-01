@@ -8,7 +8,7 @@ import { TitleService } from '../services/thisTitle.service';
 	selector: 'my-body',
 	templateUrl: '../../assets/templates/body/body.template.html',
 	directives: [ ROUTER_DIRECTIVES ],
-	providers: [ AddRemoveClass, TitleService ]
+	providers: [ AddRemoveClass ]
 })export class Body{
 	home_options : Array<string>;
 	ARC;
@@ -31,8 +31,8 @@ import { TitleService } from '../services/thisTitle.service';
 		//toggles option element when user clicks on different options
 		this.toggleActive(document.querySelectorAll('.options'), e);
 		console.log('Inside body');
-		// this.title.setTitle("hello");
-		this.title.changeValue("hello");
+		console.log( e.target.innerText.trim() );
+		this.title.changeValue( e.target.innerText.trim()  );
 	}
 
 	toggleActive(options, e){
