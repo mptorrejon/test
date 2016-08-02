@@ -37,6 +37,7 @@ gulp.task('serve', ['compile-ts', 'compile-sass'], function(){
 		
 	gulp.run
 	browserSync({
+
 		port: 3003,
 		files: [ 'index.html',outputPath , 'assets/templates/**/*.html', 'assets/styles/sass/**/*.scss' ],
 		injectChanges: true,

@@ -10,8 +10,8 @@
   "author": "Mauricio T.",
   "license": "MIT",
   "devDependencies": {
+    "@angular/forms": "^0.2.0",
     "browser-sync": "^2.9.3",
-    
     "gulp": "^3.9.0",
     "gulp-connect": "^4.1.0",
     "gulp-sass": "^2.3.2",

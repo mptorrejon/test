@@ -9,5 +9,5 @@ import {FormlyForm, FormlyConfig, FormlyMessages, FormlyProviders} from 'ng2-for
 	providers: [FormlyConfig, FormlyMessages]
 })export class FormWrapper{
 	
-	constructor(fc:FormlyConfig){}
+	// constructor(fc:FormlyConfig){}
 }

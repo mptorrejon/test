@@ -1,12 +1,78 @@
-:host .form {
+:host form {
   display: inline-block;
   vertical-align: top;
   border-left: 1px solid lightgrey;
   padding-left: 10px;
-  width: 540px; }
-  :host .form .dropdown-label {
-    width: 100%; }
-  :host .form .dropdown-label > * {
-    display: block; }
-  :host .form select, :host .form label {
-    display: block; }
+  width: 540px;
+  overflow-y: auto; }
+  :host form .col-xs-4, :host form .col-xs-8 {
+    padding: 0px;
+    position: relative; }
+    :host form .col-xs-4 label, :host form .col-xs-4 input, :host form .col-xs-8 label, :host form .col-xs-8 input {
+      float: left; }
+    :host form .col-xs-4 input, :host form .col-xs-8 input {
+      padding-right: 18px; }
+    :host form .col-xs-4 erase-content, :host form .col-xs-8 erase-content {
+      /* position: relative; */ }
+      :host form .col-xs-4 erase-content span, :host form .col-xs-8 erase-content span {
+        cursor: pointer;
+        position: absolute;
+        color: red;
+        right: -10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        color: #fff;
+        background: grey;
+        top: 30px;
+        text-align: center;
+        font-size: 13px; }
+  :host form .col-xs-4:first-child {
+    margin-right: 30px; }
+  :host form .col-xs-8 {
+    text-align: left;
+    /* Hide default HTML checkbox */
+    /* The slider */
+    /* Rounded sliders */ }
+    :host form .col-xs-8 input {
+      width: 100%;
+      padding-right: 18px; }
+    :host form .col-xs-8 .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px; }
+    :host form .col-xs-8 .switch input {
+      display: block; }
+    :host form .col-xs-8 .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s; }
+    :host form .col-xs-8 .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s; }
+    :host form .col-xs-8 input:checked + .slider {
+      background-color: #2196F3; }
+    :host form .col-xs-8 input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3; }
+    :host form .col-xs-8 input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px); }
+    :host form .col-xs-8 .slider.round {
+      border-radius: 34px; }
+    :host form .col-xs-8 .slider.round:before {
+      border-radius: 50%; }
