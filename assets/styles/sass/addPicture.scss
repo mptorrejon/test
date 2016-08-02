@@ -1,0 +1,51 @@
+:host {
+	.addPicture-wrapper, .show{
+		background: grey;
+		position:relative;
+		
+		.outer-circle{
+			background: grey;
+			width:80px;
+			height: 80px;
+			border-radius: 40px;
+			margin: 0px auto;
+			position:relative;
+			top: 25px;
+			cursor: pointer;
+			.inner-circle{
+				width: 70px;
+				height: 70px;
+				border-radius: 35px;
+				background: lightgrey;
+				margin: 0px auto;
+				position:relative;
+				top: 5px;
+				text-align: center;
+				padding-top:18px;
+				font-size: 25px;
+			}
+			.add-picture{
+				background: #000;
+				// width: 25px;
+				// height: 25px;
+				color: #fff;
+				position: absolute;
+				top:5px;
+				right:-10px;
+				padding: 2px 10px;
+				font-weight: 600;
+				font-size: 22px;
+			}
+		}
+	}
+	.show{
+		position: relative;
+		transition: .3s linear;
+		height: auto;
+	}
+	.hide{
+		position: relative;
+		transition: 3s linear;
+		height: 0px;
+	}
+}

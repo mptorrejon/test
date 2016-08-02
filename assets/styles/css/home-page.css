@@ -15,19 +15,29 @@
     width: 33%;
     display: inline-block;
     text-align: center; }
+    :host .sessionCtrl go-back button {
+      background: none;
+      border: none; }
   :host .sessionCtrl this-title {
     width: 33%;
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px; }
   :host .sessionCtrl this-save {
     width: 33%;
     display: inline-block;
     text-align: center; }
+    :host .sessionCtrl this-save button {
+      background: #000;
+      color: #fff;
+      border: none; }
 
 :host .home-wrapper-main {
   position: relative;
   transition: .5s linear;
-  vertical-align: top; }
+  vertical-align: top;
+  margin-top: 40px; }
   :host .home-wrapper-main .section-title1 {
     text-align: center;
     font-weight: 700;

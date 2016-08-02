@@ -12,7 +12,7 @@ import { TitleService } from '../services/thisTitle.service';
 })export class Body{
 	home_options : Array<string>;
 	ARC;
-	// t;
+	
 	constructor( ARC:AddRemoveClass, private title:TitleService) {
 		this.home_options = HOME_OPTIONS;
 		this.ARC = ARC;
@@ -30,9 +30,12 @@ import { TitleService } from '../services/thisTitle.service';
 		
 		//toggles option element when user clicks on different options
 		this.toggleActive(document.querySelectorAll('.options'), e);
-		console.log('Inside body');
-		console.log( e.target.innerText.trim() );
+		//fires event to place correct title
 		this.title.changeValue( e.target.innerText.trim()  );
+
+		el = document.getElementsByClassName('addPicture-wrapper')[0];
+		this.ARC.RemoveClass(el, 'show');
+		this.ARC.AddClass(el, 'hide');
 	}
 
 	toggleActive(options, e){

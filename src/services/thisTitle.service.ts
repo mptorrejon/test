@@ -8,7 +8,6 @@ export class TitleService{
 	thisTitle = this.title.asObservable();
 
 	changeValue(t){
-		console.log('new value');
 		this.title.next(t);
 	}
 }

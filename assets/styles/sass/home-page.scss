@@ -16,22 +16,34 @@
 			width:33%;
 			display:inline-block;
 			text-align: center;
+			button{
+				background: none;
+				border: none;
+			}
 		}
 		this-title{
 			width:33%;
 			display:inline-block;
 			text-align: center;
+			font-weight: 500;
+			font-size: 18px;
 		}
 		this-save{
 			width:33%;
 			display:inline-block;
 			text-align: center;
+			button{
+				background: #000;
+				color: #fff;
+				border: none;
+			}
 		}
 	}
 	.home-wrapper-main{
 		position: relative;
 		transition: .5s linear;
 		vertical-align: top;
+		margin-top:40px;
 		.section-title1{
 		  text-align: center;
 		  font-weight: 700;

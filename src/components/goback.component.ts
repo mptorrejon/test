@@ -26,5 +26,9 @@ import { AddRemoveClass} from '../services/addRemoveClass.service';
 
 		//set route to home
 		this.router.navigate([ '' ]);
+
+		el = document.getElementsByClassName('addPicture-wrapper')[0];
+		this.ARC.RemoveClass(el, 'hide');
+		this.ARC.AddClass(el, 'show');
 	}
 }

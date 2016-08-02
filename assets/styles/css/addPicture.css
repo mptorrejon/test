@@ -1,0 +1,42 @@
+:host .addPicture-wrapper, :host .show {
+  background: grey;
+  position: relative; }
+  :host .addPicture-wrapper .outer-circle, :host .show .outer-circle {
+    background: grey;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 0px auto;
+    position: relative;
+    top: 25px;
+    cursor: pointer; }
+    :host .addPicture-wrapper .outer-circle .inner-circle, :host .show .outer-circle .inner-circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 35px;
+      background: lightgrey;
+      margin: 0px auto;
+      position: relative;
+      top: 5px;
+      text-align: center;
+      padding-top: 18px;
+      font-size: 25px; }
+    :host .addPicture-wrapper .outer-circle .add-picture, :host .show .outer-circle .add-picture {
+      background: #000;
+      color: #fff;
+      position: absolute;
+      top: 5px;
+      right: -10px;
+      padding: 2px 10px;
+      font-weight: 600;
+      font-size: 22px; }
+
+:host .show {
+  position: relative;
+  transition: .3s linear;
+  height: auto; }
+
+:host .hide {
+  position: relative;
+  transition: 3s linear;
+  height: 0px; }

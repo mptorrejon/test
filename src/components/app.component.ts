@@ -6,11 +6,19 @@ import { Header } from './header/header.component';
 import { Footer } from './footer/footer.component';
 import { SessionCtrls } from './sessionCtrls.component';
 import { TitleService } from '../services/thisTitle.service';
+import { AddPicture } from './AddPicture.component';
 
 @Component({
 	selector: 'landing-site',
 	templateUrl: '../../assets/templates/body/app.template.html',
-	directives: [ ROUTER_DIRECTIVES, Header, Footer, SessionCtrls, Body ],
+	directives: [ 
+		ROUTER_DIRECTIVES, 
+		Header, 
+		Footer, 
+		SessionCtrls, 
+		Body,
+		AddPicture
+	],
 	providers: [ AddRemoveClass, TitleService ],
 	styleUrls: ['../../assets/styles/css/home-page.css']
 })
