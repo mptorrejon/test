@@ -7,21 +7,16 @@ import { disableDeprecatedForms, provideForms } from '@angular/forms';
 import{ provide } from '@angular/core';
 // new location for locationStrategy and HashLocationStrategy
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { ShowDivs } from './services/showDivs.service';
 
 bootstrap( AppComponent, [
 	APP_ROUTER_PROVIDERS,
 	FormlyProviders,
 	disableDeprecatedForms(),
 	provideForms(),
-
-	provide(LocationStrategy, {useClass: HashLocationStrategy})
+	provide(LocationStrategy, {useClass: HashLocationStrategy}),
+	ShowDivs
 ])
 .catch(err=>{
 	console.error(err);
 });
-
-/*
-	TODO
-		+ urls needs to be concatenated with hash instead of spaces
-		+ site refreshes fine but route is not defined with spaces therefore no match
-*/

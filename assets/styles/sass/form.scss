@@ -7,15 +7,27 @@
 		padding-left: 10px;
 		width: 540px;
 		overflow-y: auto;
+		/* has to match height of footer; otherwise, there will be some content cutoff */
+		padding-bottom: 65px;
 		.col-xs-4, .col-xs-8{
 			padding: 0px;
 			position: relative;
+			padding-top: 15px;
 			label, input{
 				float: left;
-
+			}
+			label{
+				
 			}
 			input{
-				padding-right: 18px;
+				width: 100%;
+				border-radius: 3px;
+				border: 1px solid lightgrey;
+				padding: 3px 18px 3px 8px;
+			}
+			input:focus{
+				// border: 1px solid green;
+				border-left: 5px solid #2196F3;
 			}
 			erase-content{
 				/* position: relative; */
@@ -23,15 +35,18 @@
 					cursor: pointer;
 					position:absolute;
 					color: red;
-					right: -10px;
+					right: 3px;
 					width: 15px;
 					height: 15px;
 					border-radius: 7.5px;
 					color: #fff;
-					background: grey;
-					top: 30px;
+					background: lightgrey;
+					top: 47px;
 					text-align: center;
 					font-size: 13px;
+				}
+				span:hover{
+					/* background: red; */
 				}	
 			}
 		}
@@ -50,6 +65,10 @@
 			  display: inline-block;
 			  width: 60px;
 			  height: 34px;
+			}
+
+			.switch-text{
+				padding:8px 0px 0px 8px;
 			}
 
 			/* Hide default HTML checkbox */
@@ -101,6 +120,35 @@
 
 			.slider.round:before {
 			  border-radius: 50%;
+			}
+			.col-xs-4{
+				width: 33%;
+			}
+			select{
+				padding: 4px 10px;
+				border: 1px solid lightgrey;
+				border-radius: 3px;
+				
+			}
+			add-another{
+				button{
+					margin-top:10px;
+					background: #fff;
+					border: 1px solid green;
+					border-radius: 3px;
+				}
+			}
+		}
+		.submit{
+			text-align: center;
+			.saveContinue{
+				background: #fff;
+				border: 1px solid #fff;
+				padding: 5px 20px;
+				border-radius: 3px;
+			}
+			.saveContinue:hover{
+				border: 1px solid grey;
 			}
 		}
 	}

@@ -14,13 +14,13 @@ export const routes: RouterConfig = [
 		component: Home,
 		children: [
 			{path: '', component: Dummy },
-			{ path: 'Personal Information', component: PersonalInformation },
-			{ path: 'Educational Experience', component: EducationalExperience },
-			{ path: 'Professional Experience', component:  ProfessionalExperience},
-			{ path: 'Employment Preferences', component: EmploymentPreferences },
-			{ path: 'Groups and Afilliations', component: GroupsAfilliations },
-			{ path: 'Privacy Settings', component: PrivacySettings }	
-		] 
+			{ path: 'Personal_Information', component: PersonalInformation },
+			{ path: 'Educational_Experience', component: EducationalExperience },
+			{ path: 'Professional_Experience', component:  ProfessionalExperience},
+			{ path: 'Employment_Preferences', component: EmploymentPreferences },
+			{ path: 'Groups_and_Afilliations', component: GroupsAfilliations },
+			{ path: 'Privacy_Settings', component: PrivacySettings }	
+		]
 	}
 ];
 

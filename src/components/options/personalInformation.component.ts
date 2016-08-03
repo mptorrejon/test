@@ -1,6 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 import { EraseContent } from '../eraseContent.component';
+import { ShowDivs } from '../../services/showDivs.service';
+import { AddAnother } from '../addAnother.component';
+import {Language} from  '../language.component';
 
 let wrapper = '../../assets/styles/css/content.css';
 let form = "../../assets/styles/css/form.css";
@@ -9,13 +12,13 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 @Component({
 	templateUrl: personalInformationTemplate,
 	styleUrls: [ wrapper, form ],
-	directives: [ REACTIVE_FORM_DIRECTIVES, EraseContent ]
+	directives: [REACTIVE_FORM_DIRECTIVES, EraseContent, AddAnother, Language]
 })export class PersonalInformation{
-
-	// @Output() firstname = new EventEmitter()
+	// repeat:Array<number>= [1];
+	// @Input() r ;
 	userForm: any;
 
-	constructor(private formBuilder: FormBuilder){
+	constructor(private formBuilder: FormBuilder, private show:ShowDivs/*, private l:Language*/){
 		this.userForm = this.formBuilder.group({
 			'firstname': ['', Validators.required],
 			'lastname': ['', Validators.required /*, some callback to a service to custom validator*/],
@@ -30,6 +33,9 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 			'stateLic': ['', Validators.required],
 			'statement': ['', Validators.required]
 		});
+		// console.log("===========");
+		// console.log( l.getItirator() );
+		// console.log(this.r);
 	}
 
 	saveUser(){
@@ -48,11 +54,25 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 		
 		// console.log(value.srcElement.value);
 	}
+	/*
+		Add any logic for when component is mounted
+	*/
+	ngOnInit(){
+		// console.log('component mounted!!!');
+		this.show.updateView(true);
+	}
+	/*
+		+ unsubscribe from ShowDivs Observable
+	*/
+	ngOnDestroy(){
+		// console.log('component unmounted!!!');
+		this.show.updateView(false);
+
+	}
 }
 
 /*
-	TODO
+	TODO - MAKE ITS OWN LIBRARY
 		+ separate toggle button into a different css file and component as well
 		so it can be imported whenever needed.
-		+ 
 */
