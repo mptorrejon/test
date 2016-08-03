@@ -1,0 +1,37 @@
+:host form {
+  display: inline-block;
+  vertical-align: top;
+  border-left: 1px solid lightgrey;
+  padding-left: 10px;
+  width: 540px; }
+  :host form .col-xs-4, :host form .col-xs-8 {
+    padding: 0px;
+    position: relative; }
+    :host form .col-xs-4 label, :host form .col-xs-4 input, :host form .col-xs-8 label, :host form .col-xs-8 input {
+      float: left; }
+    :host form .col-xs-4 input, :host form .col-xs-8 input {
+      padding-right: 18px; }
+    :host form .col-xs-4 erase-content, :host form .col-xs-8 erase-content {
+      /* position: relative; */ }
+      :host form .col-xs-4 erase-content span, :host form .col-xs-8 erase-content span {
+        cursor: pointer;
+        position: absolute;
+        color: red;
+        right: -10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        color: #fff;
+        background: grey;
+        top: 30px;
+        text-align: center;
+        font-size: 13px; }
+  :host form .col-xs-4:first-child {
+    margin-right: 30px; }
+  :host form .col-xs-8 {
+    text-align: left; }
+    :host form .col-xs-8 input {
+      width: 100%;
+      padding-right: 18px; }
+
+/*# sourceMappingURL=form.css.map */

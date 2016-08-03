@@ -7,12 +7,14 @@ import { Footer } from './footer/footer.component';
 import { SessionCtrls } from './sessionCtrls.component';
 import { TitleService } from '../services/thisTitle.service';
 import { AddPicture } from './AddPicture.component';
+// import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 
 @Component({
 	selector: 'landing-site',
 	templateUrl: '../../assets/templates/body/app.template.html',
 	directives: [ 
-		ROUTER_DIRECTIVES, 
+		ROUTER_DIRECTIVES,
+		// REACTIVE_FORM_DIRECTIVES,
 		Header, 
 		Footer, 
 		SessionCtrls, 
