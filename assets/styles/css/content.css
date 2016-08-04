@@ -1,4 +1,5 @@
 :host .content-wrapper {
   display: inline-block;
   text-align: center;
-  width: 60%; }
+  width: 60%;
+  vertical-align: top; }

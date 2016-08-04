@@ -1,11 +1,13 @@
 <header></header>
 
-<add-picture></add-picture>
+<add-picture [hidden]="isHome"></add-picture>
 
-<session-ctrls></session-ctrls>
+<session-ctrls [hidden]="!isHome"></session-ctrls>
 
-<my-body></my-body>
-
-
+<my-body 
+	[class.home-wrapper-main]="!isHome"
+	[class.home-wrapper-submenu]="isHome"
+>
+</my-body>
 
 <footer></footer>

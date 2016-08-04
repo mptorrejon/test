@@ -3,6 +3,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { AddRemoveClass } from '../services/addRemoveClass.service';
 import { HOME_OPTIONS } from '../constants/homeOptions.constant';
 import { TitleService } from '../services/thisTitle.service';
+import { Subscription } from 'rxjs/Subscription';
+import { ShowDivs} from '../services/showDivs.service';
 
 @Component({
 	selector: 'my-body',
@@ -11,34 +13,29 @@ import { TitleService } from '../services/thisTitle.service';
 	providers: [ AddRemoveClass ]
 })export class Body{
 	home_options : Array<string>;
-	ARC;
-	
-	constructor( ARC:AddRemoveClass, private title:TitleService) {
+	// ARC;
+	subscription: Subscription;
 
-		this.home_options = HOME_OPTIONS.map(function(i){
+	constructor( private ARC:AddRemoveClass, private title:TitleService, private show:ShowDivs) {
+		this.home_options = HOME_OPTIONS.map(i=>{
+
 			return i.split(" ").join("_");
 		});
 		this.ARC = ARC;
-		// this.t = T;
 	}
 
 	showRouterOutlet(e){
+		/*
+			NO NEED ANYMORE
 		let el = document.getElementsByClassName('home-wrapper-main')[0];
-		this.ARC.AddClass(el, 'home-wrapper-submenu');
-
-		el = document.getElementsByClassName('sessionCtrl')[0];
-		
-		this.ARC.AddClass(el, 'show-ctrls');
-		this.ARC.RemoveClass(el, 'hide-ctrls');
+		this.ARC.AddClass(el, 'home-wrapper-submenu');*/
 		
 		//toggles option element when user clicks on different options
 		this.toggleActive(document.querySelectorAll('.options'), e);
 		//fires event to place correct title
 		this.title.changeValue( e.target.innerText.trim()  );
-
-		el = document.getElementsByClassName('addPicture-wrapper')[0];
-		this.ARC.RemoveClass(el, 'show');
-		this.ARC.AddClass(el, 'hide');
+		//update service to hide add-picture container
+		this.show.updateView(true);
 	}
 
 	toggleActive(options, e){

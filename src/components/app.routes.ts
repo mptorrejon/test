@@ -20,7 +20,7 @@ export const routes: RouterConfig = [
 			{ path: 'Employment_Preferences', component: EmploymentPreferences },
 			{ path: 'Groups_and_Afilliations', component: GroupsAfilliations },
 			{ path: 'Privacy_Settings', component: PrivacySettings }	
-		] 
+		]
 	}
 ];
 

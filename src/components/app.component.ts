@@ -8,6 +8,9 @@ import { Footer } from './footer/footer.component';
 import { SessionCtrls } from './sessionCtrls.component';
 import { TitleService } from '../services/thisTitle.service';
 import { AddPicture } from './AddPicture.component';
+import { Subscription } from 'rxjs/Subscription';
+import { ShowDivs }from '../services/showDivs.service';
+import { PersonalInformation } from './options/personalInformation.component';
 // import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 
 @Component({
@@ -15,7 +18,6 @@ import { AddPicture } from './AddPicture.component';
 	templateUrl: '../../assets/templates/body/app.template.html',
 	directives: [ 
 		ROUTER_DIRECTIVES,
-		// REACTIVE_FORM_DIRECTIVES,
 		Header, 
 		Footer, 
 		SessionCtrls, 
@@ -23,11 +25,27 @@ import { AddPicture } from './AddPicture.component';
 		AddPicture
 	],
 	providers: [ AddRemoveClass, TitleService ],
-	styleUrls: ['../../assets/styles/css/home-page.css']
+	styleUrls: ['../../assets/styles/css/home-page.css'],
+	precompile: [PersonalInformation]
 })
 export class AppComponent {
-	
-	constructor(private router:Router, private location:Location){
-	}
 
+	// path;
+	isHome:boolean;
+	subscription: Subscription;
+
+	constructor(private show:ShowDivs, private location:Location){}
+
+	ngOnInit(){
+		/*
+			TODO: when page reloads from url request, have observable pickup partial url and set title
+		*/
+		this.subscription = this.show.isShow.subscribe(val=>{
+			this.isHome = val;
+		});
+
+		if(this.location.path() == "")	this.show.updateView(false);
+		else							this.show.updateView(true);
+		
+	}
 }
