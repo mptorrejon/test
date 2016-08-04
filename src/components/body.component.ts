@@ -14,7 +14,10 @@ import { TitleService } from '../services/thisTitle.service';
 	ARC;
 	
 	constructor( ARC:AddRemoveClass, private title:TitleService) {
-		this.home_options = HOME_OPTIONS;
+
+		this.home_options = HOME_OPTIONS.map(function(i){
+			return i.split(" ").join("_");
+		});
 		this.ARC = ARC;
 		// this.t = T;
 	}

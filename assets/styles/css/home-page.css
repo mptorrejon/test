@@ -37,7 +37,8 @@
   position: relative;
   transition: .5s linear;
   vertical-align: top;
-  margin-top: 40px; }
+  padding-top: 15px;
+  height: 100%; }
   :host .home-wrapper-main .section-title1 {
     text-align: center;
     font-weight: 700;

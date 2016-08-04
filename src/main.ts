@@ -12,8 +12,7 @@ bootstrap( AppComponent, [
 	APP_ROUTER_PROVIDERS,
 	FormlyProviders,
 	disableDeprecatedForms(),
-	provideForms(),
-
+	provideForms()//,
 	provide(LocationStrategy, {useClass: HashLocationStrategy})
 ])
 .catch(err=>{

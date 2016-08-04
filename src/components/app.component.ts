@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
+import {Location} from '@angular/common';
 import { AddRemoveClass } from '../services/addRemoveClass.service';
 import { Body } from './body.component';
 import { Header } from './header/header.component';
@@ -25,4 +26,8 @@ import { AddPicture } from './AddPicture.component';
 	styleUrls: ['../../assets/styles/css/home-page.css']
 })
 export class AppComponent {
+	
+	constructor(private router:Router, private location:Location){
+	}
+
 }
