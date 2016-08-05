@@ -1,10 +1,11 @@
-import { Component, Input, Output, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, Input, Output, ElementRef, ViewChild,EventEmitter } from '@angular/core';
 import { TOOLTIPCONTENT } from '../constants/tooltipContent.constant';
 import {AddRemoveClass} from '../services/AddRemoveClass.service';
 
 @Component({
 	host: {
 		'(document:click)': 'onclick($event)'
+	// 	// '(document:mousedown)': 'handleEvent($event)'
 	},
 	selector: 'help',
 	templateUrl: '../../assets/templates/body/help.template.html',
@@ -13,15 +14,16 @@ import {AddRemoveClass} from '../services/AddRemoveClass.service';
 
 })export class Help{
 	@Output() content:string = "";
-	@Input() type;
-	@ViewChild('parentHelp', {read: ViewContainerRef}) help:ViewContainerRef;
-
-	constructor( private ARC:AddRemoveClass, private eref:ElementRef ){}
-	ngOnInit(){
-		// console.log()
-		// console.log( this.type );
+	@Input() type:string = "";
+	// @ViewChild('parentHelp', {read: ViewContainerRef}) help:ViewContainerRef;
+	el;
+	// current;
+	// public eleRef;
+	
+	constructor( private ARC:AddRemoveClass, private eref:ElementRef ){
+		// this.eleRef = eref;
 	}
-
+	
 	displayContent(){
 		/*
 			If there is a better way to do this, please contribute
@@ -36,24 +38,12 @@ import {AddRemoveClass} from '../services/AddRemoveClass.service';
 			case 'default':
 				this.content = TOOLTIPCONTENT.default;
 		}
-
-		let el = document.getElementsByClassName('help-tooltip')[0];
-		console.log(el);
-
-		this.ARC.RemoveClass(el, 'tooltip-hide');
-		this.ARC.AddClass(el, "tooltip-show");
+		this.el = document.getElementsByClassName('help-tooltip')[0];
+		this.ARC.RemoveClass(this.el, 'tooltip-hide');
+		this.ARC.AddClass(this.el, "tooltip-show");
+		
 	}
-
-	onclick(e){
-		console.log("---");
-		console.log( this.help );
-		// if ( !this.eref.nativeElement.contains(e.target) ){
-		//      this.hideCmp();
-		// }else{
-		// 	console.log('element');
-		// }
-	}
-	hideCmp(){
-		console.log('hide!!!!');
+	onclick(){
+		console.log('a');
 	}
 }
