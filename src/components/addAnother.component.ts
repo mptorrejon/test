@@ -1,23 +1,35 @@
-import { Component,ViewChild, Input, DynamicComponentLoader,ViewContainerRef, ElementRef } from '@angular/core';
-import { Language } from './language.component';
+import { Component,ViewChild, Input, DynamicComponentLoader,ViewContainerRef, ElementRef, Injector } from '@angular/core';
+import { Language } from './container.component';
 
 @Component({
 	selector: 'add-another',
-	template: '<button (click)="addAnother(\'language\')" >+ Add Another Language<button>'
+	template: `
+				<container type="type" #container></container>
+				<button (click)="addAnother(\'language\')" >
+					+ Add Another Language
+				<button>
+			`,
+	directives: [Language]
 })export class AddAnother{
-	// @ViewChild('target', {read: ViewContainerRef}) target;
-	ele;
-	constructor(private view:ViewContainerRef ,private loader:DynamicComponentLoader, private eleRef:ElementRef){}
-
+	// gets an instance of a childview (container) so that it can dynamic loader can drop
+	// component into it
+	@ViewChild('container', {read: ViewContainerRef}) container:ViewContainerRef;
 	@Input() type;
 
+	constructor(
+		private view:ViewContainerRef,
+		private loader:DynamicComponentLoader
+	){}
+
 	ngOnInit(){
-		console.log( this.type );
+		// console.log( this.type );
 	}
 
 	addAnother(which){
-		let elem = this.eleRef;
-		console.log(which);
-		this.loader.loadNextToLocation(Language, this.view)
+		/*
+			need to implement switch so it knows what template to pick up
+			also, this can help to know the container???
+		*/
+		this.loader.loadNextToLocation(Language, this.container );
 	}
 }

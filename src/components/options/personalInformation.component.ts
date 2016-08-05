@@ -1,25 +1,32 @@
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input, ContentChildren,ViewChild, ViewContainerRef } from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 import { EraseContent } from '../eraseContent.component';
 import { ShowDivs } from '../../services/showDivs.service';
 import { AddAnother } from '../addAnother.component';
-import { Language } from  '../language.component';
+import { Language } from  '../container.component';
+import { Help } from '../help.component';
 
 let wrapper = '../../assets/styles/css/content.css';
 let form = "../../assets/styles/css/form.css";
+let switchToggle = "../assets/styles/css/switch.css";
 let personalInformationTemplate = '../../assets/templates/body/options/personalInformation.template.html';
 
 @Component({
 	templateUrl: personalInformationTemplate,
-	styleUrls: [ wrapper, form ],
-	directives: [REACTIVE_FORM_DIRECTIVES, EraseContent, AddAnother, Language]
+	styleUrls: [ wrapper, form, switchToggle ],
+	directives: [
+		REACTIVE_FORM_DIRECTIVES, 
+		EraseContent, 
+		AddAnother, 
+		Language, 
+		Help
+	]
 })export class PersonalInformation{
-	@Output() repeat:Array<number>= [1, 1];
-	@Output() r = new EventEmitter()
-	// @Input() r ;
+	// @ViewChild('language', {read: ViewContainerRef}) language:ViewContainerRef;
+	
 	userForm: any;
 
-	constructor(private formBuilder: FormBuilder, private show:ShowDivs/*, private l:Language*/){
+	constructor(private formBuilder: FormBuilder, private show:ShowDivs, private view:ViewContainerRef){
 		this.userForm = this.formBuilder.group({
 			'firstname': ['', Validators.required],
 			'lastname': ['', Validators.required /*, some callback to a service to custom validator*/],
@@ -34,21 +41,15 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 			'stateLic': ['', Validators.required],
 			'statement': ['', Validators.required]
 		});
-		
-	}
 
-	saveUser(){
-		console.log('saving user');
 	}
 	//erased input content on click/tap
 	eraseContent(id){
 		this.userForm.controls[id].updateValue('');
 	}
 	toggle(value){
-		if(value.srcElement.value=="on")
-			value.srcElement.value = "off";
-		else
-			value.srcElement.value = "on";
+		if(value.srcElement.value=="on")	value.srcElement.value = "off";
+		else 								value.srcElement.value = "on";
 	}
 	/*
 		Add any logic for when component is mounted
@@ -63,7 +64,6 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 	ngOnDestroy(){
 		// console.log('component unmounted!!!');
 		this.show.updateView(false);
-
 	}
 }
 

@@ -1,0 +1,27 @@
+.help{
+	display: inline-block;
+	cursor: pointer;
+	background: grey;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	margin-left: 8px
+}
+.help-tooltip{	
+    position: absolute;
+    padding: 3px 5px;
+    word-break: break-all;
+    font-size: 12px;
+}
+.tooltip-show{
+	display: inline-block;
+	transition: 1s linear;
+	margin-left: 0px;
+}
+.tooltip-hide{
+	display: none;
+	transition: 1s linear;
+	margin-left: -20px;
+}

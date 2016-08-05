@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+/*import {Component} from '@angular/core';
 // import { FormlyForm, FormlyConfig, FormlyMessages, FormlyProviders} from 'ng2-formly';
 // import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 
@@ -22,7 +22,7 @@ import {Component} from '@angular/core';
 	constructor(private formBuilder: FormBuilder){
 		this.userForm = this.formBuilder.group({
 			'firstname': ['', Validators.required],
-			'lastname': ['', Validators.required /*, some callbal to a service to custom validator*/],
+			'lastname': ['', Validators.required 
 		});
 	}
 	saveUser(){
@@ -31,3 +31,4 @@ import {Component} from '@angular/core';
 }
 
 
+*/

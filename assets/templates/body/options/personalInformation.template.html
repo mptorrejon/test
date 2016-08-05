@@ -1,6 +1,7 @@
-<div class="content-wrapper">
-	<form [formGroup]="userForm" (submit) = "saveUser" >
-		<div class="col-xs-4">
+<div class="content-wrapper"  >
+	<form [formGroup]="userForm" (submit) = "saveUser"  >
+		<!-- =======================FIRSTNAME========================== -->
+		<div class="col-xs-4" >
 			<label for="name" >Firstname*</label><br>
 			<!-- 
 				have 'erase-content' be inside of input element
@@ -10,23 +11,26 @@
 			<erase-content (click)="eraseContent('firstname')"></erase-content>
 			<!-- <div [hidden]="firstname.valid">Required</div> -->
 		</div>
-
+		<!-- =======================LASTNAME========================== -->
 		<div class="col-xs-4">
 			<label for="lastname" >Lastname*</label><br>
 			<input formControlName="lastname" ngControl="lastname" />
 			<erase-content (click)="eraseContent('lastname')"></erase-content>
 			<!-- <div [hidden]="lastname.valid">Required</div> -->
 		</div>
+		<!-- =======================TITLE========================== -->
 		<div class="col-xs-8">
-			<label>Professional Title</label><br>
+			<label>Professional Title</label><help type="title"></help><br>
 			<input formControlName="title" ngControl="title" />
 			<erase-content (click)="eraseContent('title')"></erase-content>
 		</div>
+		<!-- =======================LOCATION========================== -->
 		<div class="col-xs-8">
 			<label>Location</label><br>
 			<input formControlName="location" ngControl="location" />
 			<erase-content (click)="eraseContent('location')"></erase-content>
 		</div>
+		<!-- ========================RELOCATION===================== -->
 		<div class="col-xs-8">
 			<label class="switch"  >
 				<input type="checkbox" (click)="toggle($event)" checked>
@@ -34,42 +38,39 @@
 			</label>
 			<label class="switch-text">I am willing to relocate</label>
 		</div>
-
+		<!-- =======================FLD PRACTICE========================== -->
 		<div class="col-xs-8">
-			<label>Field of Practice</label><br>
+			<label>Field of Practice</label><help type="fldPractice"></help><br>
 			<input formControlName="fldPractice" ngControl="fldPractice" />
 		</div>
-
-		<div class="col-xs-8">
+		<!-- =======================LANGUAGES========================== -->
+		<div class="col-xs-8" >
 			<label class="col-xs-8">Languages</label><br>
-			<div *ngFor="let i of repeat" id="language">
-				<language ></language>
-			</div>
-			
 			<add-another type="language"></add-another>
 		</div>
-
+		<!-- =======================PHONE========================== -->
 		<div class="col-xs-8">
 			<label>Phone</label><br>
 			<input formControlName="phone" ngControl="phone" />
 			<erase-content (click)="eraseContent('phone')"></erase-content>
 		</div>
-
+		<!-- =======================EMAIL========================== -->
 		<div class="col-xs-8">
 			<label>Email</label><br>
 			<input formControlName="email" ngControl="email" />
 			<erase-content (click)="eraseContent('email')"></erase-content>
 		</div>
-
+		<!-- =======================NPI NUMBER========================== -->
 		<div class="col-xs-8">
 			<label>Individual NPI Number</label><br>
 			<input formControlName="npi" ngControl="npi" />
 			<erase-content (click)="eraseContent('npi')"></erase-content>
 		</div>
-
+		<!-- =======================STATE LICENSE========================== -->
 		<div class="col-xs-8">
 			<label>State License</label><br>
 			<input formControlName="stateLic" ngControl="stateLic" />
+			<add-another type="language"></add-another>
 			<erase-content (click)="eraseContent('stateLic')"></erase-content>
 		</div>
 
@@ -79,7 +80,7 @@
 			<label>Personal Statement</label><br>
 			<textarea rows="10" cols="47" formControlName="statement" ngControl="statement" >
 			</textarea>
-			
+			<word-counter>0/250</word-counter>
 		</div>
 
 		<div class="col-xs-8 submit">
