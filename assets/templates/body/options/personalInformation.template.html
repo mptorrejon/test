@@ -20,7 +20,7 @@
 		</div>
 		<!-- =======================TITLE========================== -->
 		<div class="col-xs-8">
-			<label>Professional Title</label><help type="title"></help><br>
+			<label>Professional Title</label><help type="title" ></help><br>
 			<input formControlName="title" ngControl="title" />
 			<erase-content (click)="eraseContent('title')"></erase-content>
 		</div>
@@ -40,7 +40,7 @@
 		</div>
 		<!-- =======================FLD PRACTICE========================== -->
 		<div class="col-xs-8">
-			<label>Field of Practice</label><help type="fldPractice"></help><br>
+			<label>Field of Practice</label> <help type="fldPractice" ></help><br>
 			<input formControlName="fldPractice" ngControl="fldPractice" />
 		</div>
 		<!-- =======================LANGUAGES========================== -->
@@ -62,7 +62,7 @@
 		</div>
 		<!-- =======================NPI NUMBER========================== -->
 		<div class="col-xs-8">
-			<label>Individual NPI Number</label><br>
+			<label>Individual NPI Number</label><help type="npi" ></help><br>
 			<input formControlName="npi" ngControl="npi" />
 			<erase-content (click)="eraseContent('npi')"></erase-content>
 		</div>
@@ -77,10 +77,16 @@
 		<!-- ADD ANOTHER STATE -->
 
 		<div class="col-xs-8">
-			<label>Personal Statement</label><br>
-			<textarea rows="10" cols="47" formControlName="statement" ngControl="statement" >
+			<label>Personal Statement</label><help type="statement" ></help><br>
+			<textarea 
+				rows="10" 
+				cols="47" 
+				maxlength="250"
+				formControlName="statement" 
+				ngControl="statement" 
+				(keydown)="UpdateCounter($event)">
 			</textarea>
-			<word-counter>0/250</word-counter>
+			<word-counter [count]="counter" ></word-counter>
 		</div>
 
 		<div class="col-xs-8 submit">

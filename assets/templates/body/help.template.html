@@ -1,4 +1,4 @@
-<div #parentHelp>
-	<div class="help" (click)="displayContent()">?</div>
+<div class="help-container" >
+	<div class="help" (click)="displayContent($event)">?</div>
 	<span class="help-tooltip tooltip-hide">{{content}}</span>
 </div>

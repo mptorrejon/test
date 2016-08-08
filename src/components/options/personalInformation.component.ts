@@ -5,6 +5,7 @@ import { ShowDivs } from '../../services/showDivs.service';
 import { AddAnother } from '../addAnother.component';
 import { Language } from  '../container.component';
 import { Help } from '../help.component';
+import {WordCount} from '../wordCount.component';
 
 let wrapper = '../../assets/styles/css/content.css';
 let form = "../../assets/styles/css/form.css";
@@ -19,13 +20,13 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 		EraseContent, 
 		AddAnother, 
 		Language, 
-		Help
+		Help,
+		WordCount
 	]
 })export class PersonalInformation{
-	// @ViewChild('language', {read: ViewContainerRef}) language:ViewContainerRef;
-	
 	userForm: any;
-
+	
+	counter:number;
 	constructor(private formBuilder: FormBuilder, private show:ShowDivs, private view:ViewContainerRef){
 		this.userForm = this.formBuilder.group({
 			'firstname': ['', Validators.required],
@@ -65,10 +66,8 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 		// console.log('component unmounted!!!');
 		this.show.updateView(false);
 	}
-}
 
-/*
-	TODO - MAKE ITS OWN LIBRARY
-		+ separate toggle button into a different css file and component as well
-		so it can be imported whenever needed.
-*/
+	UpdateCounter($event){
+		($event.keyCode==8)?this.counter -= 1:this.counter = $event.srcElement.textLength+1;
+	}
+}
