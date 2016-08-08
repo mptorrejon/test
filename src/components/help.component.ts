@@ -1,10 +1,11 @@
-import { Component, Input, Output, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, Input, Output, ElementRef, ViewChild,EventEmitter } from '@angular/core';
 import { TOOLTIPCONTENT } from '../constants/tooltipContent.constant';
 import { AddRemoveClass } from '../services/AddRemoveClass.service';
 
 @Component({
 	host: {
-		"(document: click)": "onclick( $event )"
+
+		'(document:click)': 'onclick($event)'
 	},
 	selector: 'help',
 	templateUrl: '../../assets/templates/body/help.template.html',
@@ -23,6 +24,7 @@ import { AddRemoveClass } from '../services/AddRemoveClass.service';
 
 	displayContent(event){
 		/*If there is a better way to do this, please contribute*/
+
 		switch(this.type){
 			case 'title':		this.content = TOOLTIPCONTENT.title;		break;
 			case 'fldPractice':	this.content = TOOLTIPCONTENT.fldPractice;	break;
@@ -62,5 +64,6 @@ import { AddRemoveClass } from '../services/AddRemoveClass.service';
 				this.ARC.AddClass(this.el, "tooltip-hide");
 			}
 		}
+
 	}
 }
