@@ -10,6 +10,8 @@ import { TitleService } from '../services/thisTitle.service';
 import { AddPicture } from './AddPicture.component';
 import { Subscription } from 'rxjs/Subscription';
 import { ShowDivs }from '../services/showDivs.service';
+import {ProgressGraph} from './progressGraph.component';
+
 import { PersonalInformation } from './options/personalInformation.component';
 // import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 
@@ -22,7 +24,8 @@ import { PersonalInformation } from './options/personalInformation.component';
 		Footer, 
 		SessionCtrls, 
 		Body,
-		AddPicture
+		AddPicture,
+		ProgressGraph
 	],
 	providers: [ AddRemoveClass, TitleService ],
 	styleUrls: ['../../assets/styles/css/home-page.css'],

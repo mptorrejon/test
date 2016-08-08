@@ -18,7 +18,6 @@ import { ShowDivs} from '../services/showDivs.service';
 
 	constructor( private ARC:AddRemoveClass, private title:TitleService, private show:ShowDivs) {
 		this.home_options = HOME_OPTIONS.map(i=>{
-
 			return i.split(" ").join("_");
 		});
 		this.ARC = ARC;
