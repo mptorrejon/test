@@ -32,3 +32,7 @@
   :host .header-wrap .hamburguer-wrapper:hover {
     transition: .1s linear;
     letter-spacing: 1px; }
+
+@media screen and (max-width: 700px) and (max-width: 700px) {
+  :host .search-bar-wrapper {
+    display: none; } }
