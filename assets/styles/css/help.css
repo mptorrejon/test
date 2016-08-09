@@ -1,5 +1,5 @@
 :host .help-container {
-  display: block; }
+  display: inline-block; }
   :host .help-container .help {
     display: inline-block;
     cursor: pointer;

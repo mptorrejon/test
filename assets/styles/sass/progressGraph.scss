@@ -32,14 +32,15 @@
 // 	border-radius: 50%;
 // 	left: 27%;
 // }
-svg{
+.circle-progress{
+	display:inline-block;
 	transform: rotate(-90deg);
 	background: grey;
 	border-radius: 50%;
 	width:150;
 	height:150;
 }
-svg::before{
+.circle-progress::before{
 	content: '';
 	display: block;
 	margin-left: 50%;
@@ -71,3 +72,10 @@ text{
 @keyframes bg {
   50% { background: #655; }
 }
+
+@media screen and (max-width: 940px){
+	.circle-progress{
+		display: none;
+	}
+}
+@import './@media-queries/body/form/main.scss';

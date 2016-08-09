@@ -5,7 +5,8 @@ import { ShowDivs } from '../../services/showDivs.service';
 import { AddAnother } from '../addAnother.component';
 import { Language } from  '../container.component';
 import { Help } from '../help.component';
-import {WordCount} from '../wordCount.component';
+import { WordCount } from '../wordCount.component';
+import { TitleService } from  '../../services/thisTitle.service';
 
 let wrapper = '../../assets/styles/css/content.css';
 let form = "../../assets/styles/css/form.css";
@@ -25,9 +26,15 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 	]
 })export class PersonalInformation{
 	userForm: any;
-	
+	thisTitle:string="Default";
 	counter:number;
-	constructor(private formBuilder: FormBuilder, private show:ShowDivs, private view:ViewContainerRef){
+
+	constructor( 
+		private formBuilder: FormBuilder, 
+		private show:ShowDivs, 
+		private view:ViewContainerRef,
+		private title: TitleService
+	){
 		this.userForm = this.formBuilder.group({
 			'firstname': ['', Validators.required],
 			'lastname': ['', Validators.required /*, some callback to a service to custom validator*/],
@@ -42,7 +49,9 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 			'stateLic': ['', Validators.required],
 			'statement': ['', Validators.required]
 		});
-
+		title.thisTitle.subscribe(val=>{
+			this.thisTitle = val;
+		});
 	}
 	//erased input content on click/tap
 	eraseContent(id){

@@ -1,3 +1,4 @@
+<div class="form-mobile-title">{{thisTitle}}</div>
 <div class="content-wrapper"  >
 	<form [formGroup]="userForm" (submit) = "saveUser"  >
 		<!-- =======================FIRSTNAME========================== -->
@@ -80,7 +81,7 @@
 			<label>Personal Statement</label><help type="statement" ></help><br>
 			<textarea 
 				rows="10" 
-				cols="47" 
+				cols="58" 
 				maxlength="250"
 				formControlName="statement" 
 				ngControl="statement" 
@@ -93,4 +94,9 @@
 			<button class="saveContinue">Save and Continue ></button>
 		</div>
 	</form>
+	<div class="horizontal-progress-bar">
+		<div class="progress-bar">
+			50%
+		</div>
+	</div>
 </div>

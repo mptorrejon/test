@@ -18,11 +18,16 @@
     :host .sessionCtrl go-back button {
       background: none;
       border: none; }
+    :host .sessionCtrl go-back .goback-desktop {
+      display: inline-block; }
+    :host .sessionCtrl go-back .goback-mobile {
+      display: none; }
   :host .sessionCtrl this-title {
     display: inline-block;
     text-align: center;
     font-weight: 500;
-    font-size: 18px; }
+    font-size: 18px;
+    width: 32%; }
   :host .sessionCtrl this-save {
     width: 33%;
     display: inline-block;
@@ -48,7 +53,6 @@
     text-align: center;
     font-size: 16px; }
   :host .home-wrapper-main .main-wrapper {
-    /* list-style-type: none; */
     padding: 0px; }
     :host .home-wrapper-main .main-wrapper .options-wrapper {
       position: relative;
@@ -80,12 +84,14 @@
     display: none; }
   :host .home-wrapper-submenu .main-wrapper {
     width: auto;
-    display: inline-block; }
+    display: inline-block;
+    padding: 0px 20px 0px 0px; }
     :host .home-wrapper-submenu .main-wrapper .options-wrapper {
       width: auto;
       border: none;
       padding: 0px;
-      list-style-type: none; }
+      list-style-type: none;
+      padding: 8px 0px; }
       :host .home-wrapper-submenu .main-wrapper .options-wrapper .option-icon {
         display: none; }
       :host .home-wrapper-submenu .main-wrapper .options-wrapper .options {
@@ -113,6 +119,15 @@
     padding-top: 0px; } }
 
 @media screen and (max-width: 700px) and (max-width: 700px) {
+  :host my-body {
+    background: #fff;
+    display: block !important;
+    margin: 0px auto;
+    width: 95%;
+    margin-top: 20px !important; }
+  :host form {
+    border-left: none !important;
+    width: auto !important; }
   :host .section-title1, :host .section-title2, :host .main-wrapper {
     width: 90%;
     margin: 0px auto;
@@ -129,3 +144,34 @@
   @media screen and (max-width: 700px) and (max-width: 700px) and (max-width: 700px) {
     :host .main-wrapper .option-icon {
       display: none; } }
+
+@media screen and (max-width: 765px) {
+  :host .sub-menu {
+    display: none !important; }
+  :host .main.menu {
+    display: block !important; } }
+
+@media screen and (max-width: 700px) {
+  :host .sessionCtrl {
+    background: grey;
+    width: 100%;
+    padding: 10px 0px; } }
+
+@media screen and (max-width: 700px) and (max-width: 700px) {
+  :host go-back {
+    text-align: left !important;
+    padding-left: 10px; }
+  :host .goback-desktop {
+    display: none !important; }
+  :host .goback-mobile {
+    display: inline-block !important;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px; }
+  :host this-save {
+    text-align: right !important; }
+  :host this-save button {
+    background: transparent !important;
+    font-weight: 600; }
+  :host this-title {
+    visibility: hidden; } }

@@ -1,3 +1,14 @@
 <span class="go-back">
-	<button (click)="goBack()" ><</button>
+	<button 
+		(click)="goBack()" 
+		class="goback-desktop"
+	><</button>
+	<!-- 
+		+ on mobile, onclick, should take you back to the previous screen you were in
+		implement functionality for that
+	 -->
+	<button 
+		(click)="goBack()" 
+		class="goback-mobile"
+	>X</button>
 </span>

@@ -1,0 +1,10 @@
+:host {
+  /*
+		FIGURE out why .circle-progress does not comply with media queries
+	*/ }
+  @media screen and (max-width: 940px) {
+    :host .horizontal-progress-bar {
+      display: block; } }
+  @media screen and (max-width: 700px) {
+    :host .form-mobile-title {
+      display: block; } }

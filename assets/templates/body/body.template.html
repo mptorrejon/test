@@ -1,11 +1,15 @@
 <p class="section-title1">Let's get Started</p>
 <p class="section-title2"> Complete your profile by filling out the sections below</p>
-<ul class="main-wrapper">
+<ul 
+	class="main-wrapper" 
+	[class.sub-menu]="isHome"
+	[class.main-menu]="!isHome" 
+>
 	<li *ngFor="let option of home_options" 
 		class="options-wrapper" 
 		[routerLink]="[option]"
 	>
-		<span class="option-icon"> ICON </span>
+		<span class="option-icon">ICON</span>
 		<span 
 			class="options" 
 			(click)="showRouterOutlet($event)"

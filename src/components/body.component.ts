@@ -4,7 +4,7 @@ import { AddRemoveClass } from '../services/addRemoveClass.service';
 import { HOME_OPTIONS } from '../constants/homeOptions.constant';
 import { TitleService } from '../services/thisTitle.service';
 import { Subscription } from 'rxjs/Subscription';
-import { ShowDivs} from '../services/showDivs.service';
+import { ShowDivs } from '../services/showDivs.service';
 
 @Component({
 	selector: 'my-body',
@@ -15,24 +15,24 @@ import { ShowDivs} from '../services/showDivs.service';
 	home_options : Array<string>;
 	// ARC;
 	subscription: Subscription;
-
+	isHome;
 	constructor( private ARC:AddRemoveClass, private title:TitleService, private show:ShowDivs) {
+		//TODO
+		// return string so it is readable, not concatanated with "_"
 		this.home_options = HOME_OPTIONS.map(i=>{
 			return i.split(" ").join("_");
 		});
 		this.ARC = ARC;
+
 	}
 
 	showRouterOutlet(e){
-		/*
-			NO NEED ANYMORE
-		let el = document.getElementsByClassName('home-wrapper-main')[0];
-		this.ARC.AddClass(el, 'home-wrapper-submenu');*/
-		
 		//toggles option element when user clicks on different options
 		this.toggleActive(document.querySelectorAll('.options'), e);
+
 		//fires event to place correct title
 		this.title.changeValue( e.target.innerText.trim()  );
+
 		//update service to hide add-picture container
 		this.show.updateView(true);
 	}
@@ -46,5 +46,12 @@ import { ShowDivs} from '../services/showDivs.service';
 		//sets element with proper class 'active'
 		this.ARC.RemoveClass(e.target, 'disable');
 		this.ARC.AddClass(e.target, 'active');
+	}
+	ngOnInit(){
+		//subscribes to update view for sub-menu/main-menu accordingly
+		this.show.isShow.subscribe(val=>{
+			// console.log(val);
+			this.isHome = val;
+		});
 	}
 }

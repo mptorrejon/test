@@ -10,7 +10,7 @@ import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 	directives: [ROUTER_DIRECTIVES]
 
 }) export class ThisTitle{
-	title:string = "Hi";
+	title:string = "";
 	subscription: Subscription;
 	
 	constructor( private titleService:TitleService, private router:Router ) {}

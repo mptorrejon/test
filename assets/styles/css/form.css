@@ -1,3 +1,8 @@
+:host .form-mobile-title {
+  display: none;
+  font-size: 20px;
+  padding: 10px 0px; }
+
 :host form {
   display: inline-block;
   vertical-align: top;
@@ -37,8 +42,11 @@
         font-size: 13px; }
   :host form .col-xs-4:first-child {
     margin-right: 30px; }
+  :host form .col-xs-4 {
+    width: 37%; }
   :host form .col-xs-8 {
-    text-align: left; }
+    text-align: left;
+    width: 80%; }
     :host form .col-xs-8 input {
       width: 100%;
       padding-right: 18px; }
@@ -56,12 +64,47 @@
     :host form .col-xs-8 language .language-wrapper {
       width: 100%;
       display: inline-block; }
-  :host form .submit {
-    text-align: center; }
-    :host form .submit .saveContinue {
-      background: #fff;
-      border: 1px solid #fff;
-      padding: 5px 20px;
-      border-radius: 3px; }
-    :host form .submit .saveContinue:hover {
-      border: 1px solid grey; }
+    :host form .col-xs-8 textarea {
+      width: 100%; }
+
+:host .submit {
+  text-align: center;
+  margin-bottom: 20px; }
+  :host .submit .saveContinue {
+    background: #fff;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    border-radius: 3px;
+    display: block;
+    margin: 0px auto; }
+  :host .submit .saveContinue:hover {
+    border: 1px solid grey; }
+
+:host .horizontal-progress-bar {
+  display: none;
+  max-width: 80%;
+  min-width: 100px;
+  position: relative;
+  border: 5px solid lightgrey;
+  height: 30px;
+  position: relative;
+  bottom: 70px;
+  background: #fff;
+  border-radius: 5px;
+  margin-left: 10px; }
+  :host .horizontal-progress-bar .progress-bar {
+    width: 50%;
+    background: grey;
+    height: 80%;
+    margin: 2px 0px 0px 2px; }
+
+:host {
+  /*
+		FIGURE out why .circle-progress does not comply with media queries
+	*/ }
+  @media screen and (max-width: 940px) {
+    :host .horizontal-progress-bar {
+      display: block; } }
+  @media screen and (max-width: 700px) {
+    :host .form-mobile-title {
+      display: block; } }

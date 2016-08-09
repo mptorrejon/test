@@ -1,8 +1,6 @@
-
 :host{
 
 	@media screen and( max-width:700px){
-	
 		.addPicture-wrapper{
 			// background: blue;
 		}
@@ -11,9 +9,20 @@
 			display:block;
 			height:auto;
 			padding-top: 0px;
-			
 		}
+
 		@media screen and( max-width:700px){
+			my-body{
+				background: #fff;
+				display: block !important;
+				margin: 0px auto;
+				width: 95%;
+				margin-top: 20px !important;
+			}
+			form{
+				border-left: none !important;
+				width: auto !important;
+			}
 			.section-title1, .section-title2, .main-wrapper{
 				width: 90%;
 				margin:0px auto;
@@ -37,7 +46,48 @@
 				}
 			}
 		}
-	}	
+	}
+	@media screen and(max-width: 765px){
+		.sub-menu{
+			display: none !important;
+		}
+		.main.menu{
+			display: block !important;
+		}
+	}
+	@media screen and(max-width: 700px){
+		.sessionCtrl{
+			background: grey;
+			width: 100%;
+			padding: 10px 0px;
+		}
+		@media screen and(max-width: 700px){
+			go-back{
+				text-align: left !important;
+				padding-left: 10px;
+			}
+			.goback-desktop{
+				display: none !important;
+			}
+			.goback-mobile{
+				display: inline-block !important;
+				color: #fff;
+				font-weight: 600;
+				font-size: 20px;
+			}
+			this-save{
+				text-align: right !important;
+			}
+			this-save button{
+				background: transparent !important;
+				font-weight: 600;
+			}
+			this-title{
+				visibility: hidden;
+			}
+		}
+		
+	}
 }
 
 
