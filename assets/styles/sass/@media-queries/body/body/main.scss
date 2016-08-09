@@ -1,0 +1,43 @@
+
+:host{
+
+	@media screen and( max-width:700px){
+	
+		.addPicture-wrapper{
+			// background: blue;
+		}
+		.home-wrapper-main{
+			// color:red;
+			display:block;
+			height:auto;
+			padding-top: 0px;
+			
+		}
+		@media screen and( max-width:700px){
+			.section-title1, .section-title2, .main-wrapper{
+				width: 90%;
+				margin:0px auto;
+				background: #fff;
+				transition: .5s linear;
+			}
+			.section-title2{
+				margin-bottom: 10px;
+				padding-bottom:10px;
+				border-bottom: 2px solid grey;
+			}
+			.main-wrapper{
+				padding: 20px 0px !important;
+				.options-wrapper{
+					width: 80% !important
+				}
+				@media screen and( max-width:700px){
+					.option-icon{
+						display: none;
+					}
+				}
+			}
+		}
+	}	
+}
+
+

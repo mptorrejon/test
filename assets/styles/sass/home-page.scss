@@ -1,3 +1,5 @@
+
+
 :host{
 	.show-ctrls{
 		display: block;
@@ -39,6 +41,8 @@
 			}
 		}
 	}
+	my-body{
+	}
 	.home-wrapper-main{
 		position: relative;
 		transition: .5s linear;
@@ -50,13 +54,14 @@
 		  text-align: center;
 		  font-weight: 700;
 		  font-size: 24px;
+		  padding-top: 40px;
 		}
 		.section-title2{
 		  text-align:center;
 		  font-size:16px;
 		}
 		.main-wrapper{
-			width: 100%;
+			// width: 100%;
 			/* list-style-type: none; */
 			padding: 0px;
 			// display:inline-block;
@@ -133,3 +138,4 @@
 		}
 	}	
 }
+@import './@media-queries/body/body/main.scss';
