@@ -1,0 +1,23 @@
+@media screen and (max-width: 700px) {
+  :host .home-wrapper-main {
+    display: block;
+    height: auto;
+    padding-top: 0px; } }
+
+@media screen and (max-width: 700px) and (max-width: 700px) {
+  :host .section-title1, :host .section-title2, :host .main-wrapper {
+    width: 90%;
+    margin: 0px auto;
+    background: #fff;
+    transition: .5s linear; }
+  :host .section-title2 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid grey; }
+  :host .main-wrapper {
+    padding: 20px 0px !important; }
+    :host .main-wrapper .options-wrapper {
+      width: 80% !important; } }
+  @media screen and (max-width: 700px) and (max-width: 700px) and (max-width: 700px) {
+    :host .main-wrapper .option-icon {
+      display: none; } }

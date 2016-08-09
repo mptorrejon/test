@@ -1,14 +1,17 @@
 <header></header>
 
-<add-picture [hidden]="isHome"></add-picture>
+<add-picture 
+	[hidden]="isHome"
+></add-picture>
 
-<session-ctrls [hidden]="!isHome"></session-ctrls>
+<session-ctrls 
+	[hidden]="!isHome"
+></session-ctrls>
 
 <my-body 
 	[class.home-wrapper-main]="!isHome"
 	[class.home-wrapper-submenu]="isHome"
->
-</my-body>
+></my-body>
 
 <progress-graph [hidden]="!isHome"></progress-graph>
 

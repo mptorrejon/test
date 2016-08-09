@@ -65,3 +65,9 @@ text{
 @keyframes fillup {
   to { stroke-dasharray: 158 158; }
 }
+@keyframes spin {
+  to { transform: rotate(.5turn); }
+}
+@keyframes bg {
+  50% { background: #655; }
+}
