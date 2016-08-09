@@ -43,10 +43,10 @@
   :host form .col-xs-4:first-child {
     margin-right: 30px; }
   :host form .col-xs-4 {
-    width: 37%; }
+    width: 41%; }
   :host form .col-xs-8 {
     text-align: left;
-    width: 80%; }
+    width: 90%; }
     :host form .col-xs-8 input {
       width: 100%;
       padding-right: 18px; }
@@ -82,7 +82,7 @@
 
 :host .horizontal-progress-bar {
   display: none;
-  max-width: 80%;
+  max-width: 88%;
   min-width: 100px;
   position: relative;
   border: 5px solid lightgrey;
