@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 // import {SubMenu} from '../subMenu.component';
 // import { ThisForm } from '../thisForm.component';
-import { GoBack } from '../goback.component';
-import { ThisTitle } from '../thisTitle.component';
-import { ThisSave } from '../thisSave.component';
+import { GoBack } from '../body/goback.component';
+import { ThisTitle } from '../body/thisTitle.component';
+import { ThisSave } from '../body/thisSave.component';
 // import{ TitleService } from '../../services/thisTitle.service';
 
 @Component({

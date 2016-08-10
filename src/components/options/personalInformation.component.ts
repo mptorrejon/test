@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output, Input, ContentChildren,ViewChild, ViewContainerRef } from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
-import { EraseContent } from '../eraseContent.component';
+import { EraseContent } from '../body/eraseContent.component';
 import { ShowDivs } from '../../services/showDivs.service';
-import { AddAnother } from '../addAnother.component';
-import { Language } from  '../container.component';
-import { Help } from '../help.component';
-import { WordCount } from '../wordCount.component';
+import { AddAnother } from '../body/addAnother.component';
+import { Language } from  '../body/container.component';
+import { Help } from '../body/help.component';
+import { WordCount } from '../body/wordCount.component';
 import { TitleService } from  '../../services/thisTitle.service';
 
 let wrapper = '../../assets/styles/css/content.css';

@@ -99,9 +99,11 @@
     font-weight: 600;
     font-size: 20px; }
   :host this-save {
-    text-align: right !important; }
+    width: auto !important;
+    float: right;
+    display: block !important; }
   :host this-save button {
     background: transparent !important;
     font-weight: 600; }
   :host this-title {
-    visibility: hidden; } }
+    display: none !important; } }

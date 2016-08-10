@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {ROUTER_DIRECTIVES, Router} from '@angular/router';
-import { AddRemoveClass} from '../services/addRemoveClass.service';
-import { ShowDivs }from '../services/showDivs.service';
+import { AddRemoveClass} from '../../services/addRemoveClass.service';
+import { ShowDivs }from '../../services/showDivs.service';
 
 @Component({
 	selector: 'go-back',

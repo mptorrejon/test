@@ -76,14 +76,18 @@
 				font-size: 20px;
 			}
 			this-save{
-				text-align: right !important;
+				// text-align: right !important;
+				width: auto !important;
+				float: right ;
+				display: block !important;
 			}
 			this-save button{
 				background: transparent !important;
 				font-weight: 600;
 			}
 			this-title{
-				visibility: hidden;
+				// visibility: hidden;
+				display: none !important;
 			}
 		}
 		

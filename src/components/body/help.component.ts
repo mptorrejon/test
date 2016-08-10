@@ -1,6 +1,6 @@
 import { Component, Input, Output, ElementRef, ViewChild,EventEmitter } from '@angular/core';
-import { TOOLTIPCONTENT } from '../constants/tooltipContent.constant';
-import { AddRemoveClass } from '../services/AddRemoveClass.service';
+import { TOOLTIPCONTENT } from '../../constants/tooltipContent.constant';
+import { AddRemoveClass } from '../../services/AddRemoveClass.service';
 
 @Component({
 	host: {

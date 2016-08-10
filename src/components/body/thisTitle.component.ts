@@ -1,5 +1,5 @@
 import { Component, Inject, Injectable } from '@angular/core';
-import { TitleService } from '../services/thisTitle.service';
+import { TitleService } from '../../services/thisTitle.service';
 import { Subscription } from 'rxjs/Subscription';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 

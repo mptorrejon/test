@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter, Inject } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { AddRemoveClass } from '../services/addRemoveClass.service';
-import { HOME_OPTIONS } from '../constants/homeOptions.constant';
-import { TitleService } from '../services/thisTitle.service';
+import { AddRemoveClass } from '../../services/addRemoveClass.service';
+import { HOME_OPTIONS } from '../../constants/homeOptions.constant';
+import { TitleService } from '../../services/thisTitle.service';
 import { Subscription } from 'rxjs/Subscription';
-import { ShowDivs } from '../services/showDivs.service';
+import { ShowDivs } from '../../services/showDivs.service';
 
 @Component({
 	selector: 'my-body',
