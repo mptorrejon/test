@@ -1,4 +1,4 @@
-<div class="container-wrapper"> {{type}}
+<div class="container-wrapper" *ngIf="languageType">
 	<!-- <input formControlName="language" ngControl="language" class="col-xs-4"/> -->
 	<input class="col-xs-4"/>
 	<select class="col-xs-6">
@@ -8,4 +8,9 @@
 		<option>Intermediate</option>
 		<option>Advanced</option>
 	</select>
+</div>
+
+<div *ngIf="stateType">
+	<!-- <input formControlName="stateLic" ngControl="stateLic" /> -->
+	<input />
 </div>

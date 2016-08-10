@@ -1,19 +1,18 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { AddRemoveClass } from '../../services/addRemoveClass.service';
+import { AddRemoveClass } from '../services/addRemoveClass.service';
 import { Body } from './body.component';
-import { Header } from '../header/header.component';
-import { Footer } from '../footer/footer.component';
+import { Header } from './header/header.component';
+import { Footer } from './footer/footer.component';
 import { SessionCtrls } from './sessionCtrls.component';
-import { TitleService } from '../../services/thisTitle.service';
-// import { SetTemplate } from '../../services/setTemplate.service';
+import { TitleService } from '../services/thisTitle.service';
 import { AddPicture } from './AddPicture.component';
 import { Subscription } from 'rxjs/Subscription';
-import { ShowDivs }from '../../services/showDivs.service';
+import { ShowDivs }from '../services/showDivs.service';
 import { ProgressGraph } from './progressGraph.component';
 
-import { PersonalInformation } from '../options/personalInformation.component';
+import { PersonalInformation } from './options/personalInformation.component';
 // import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 
 @Component({
@@ -28,7 +27,7 @@ import { PersonalInformation } from '../options/personalInformation.component';
 		AddPicture,
 		ProgressGraph
 	],
-	providers: [ AddRemoveClass, TitleService/*, SetTemplate*/ ],
+	providers: [ AddRemoveClass, TitleService ],
 	styleUrls: ['../../assets/styles/css/home-page.css'],
 	precompile: [PersonalInformation]
 })

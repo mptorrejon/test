@@ -1,3 +1,7 @@
+Folder PATH listing for volume OSDisk
+Volume serial number is A4B3-5FC6
+(tree /f /a > output.txt)
+C:.
 |   .gitignore
 |   file-structure.txt
 |   gulp.config.js
@@ -6,18 +10,43 @@
 |   package.json
 |   README.md
 |   system.config.js
+|   tree.txt
 |   tsConfig.json
 |   typings.json
 |   
 +---assets
 |   +---styles
+|   |   |   main.css
+|   |   |   
 |   |   +---css
+|   |   |   |   addPicture.css
 |   |   |   |   block-options.css
+|   |   |   |   content.css
 |   |   |   |   form.css
+|   |   |   |   help.css
 |   |   |   |   home-page.css
 |   |   |   |   personalInformation.css
+|   |   |   |   progressGraph.css
 |   |   |   |   submenu.css
+|   |   |   |   switch.css
 |   |   |   |   
+|   |   |   +---@media-queries
+|   |   |   |   +---body
+|   |   |   |   |   +---body
+|   |   |   |   |   |       main.css
+|   |   |   |   |   |       
+|   |   |   |   |   +---ctrls
+|   |   |   |   |   |       main.css
+|   |   |   |   |   |       
+|   |   |   |   |   \---form
+|   |   |   |   |           main.css
+|   |   |   |   |           
+|   |   |   |   +---footer
+|   |   |   |   |       main.css
+|   |   |   |   |       
+|   |   |   |   \---header
+|   |   |   |           main.css
+|   |   |   |           
 |   |   |   +---footer
 |   |   |   |       footer.css
 |   |   |   |       
@@ -25,12 +54,33 @@
 |   |   |           header.css
 |   |   |           
 |   |   \---sass
+|   |       |   addPicture.scss
 |   |       |   block-options.scss
+|   |       |   content.scss
 |   |       |   form.scss
+|   |       |   help.scss
 |   |       |   home-page.scss
 |   |       |   personalInformation.scss
-|   |       |   submenu.scss
+|   |       |   progressGraph.scss
+|   |       |   switch.scss
 |   |       |   
+|   |       +---@media-queries
+|   |       |   +---body
+|   |       |   |   +---body
+|   |       |   |   |       main.scss
+|   |       |   |   |       
+|   |       |   |   +---ctrls
+|   |       |   |   |       main.scss
+|   |       |   |   |       
+|   |       |   |   \---form
+|   |       |   |           main.scss
+|   |       |   |           
+|   |       |   +---footer
+|   |       |   |       main.scss
+|   |       |   |       
+|   |       |   \---header
+|   |       |           main.scss
+|   |       |           
 |   |       +---footer
 |   |       |       footer.scss
 |   |       |       
@@ -38,15 +88,19 @@
 |   |               header.scss
 |   |               
 |   \---templates
+|       |   addPicture.template.html
+|       |   
 |       +---body
 |       |   |   app.template.html
-|       |   |   form.template.html
-|       |   |   formWrapper.template.html
+|       |   |   body.template.html
+|       |   |   container.template.html
 |       |   |   goback.template.html
+|       |   |   help.template.html
+|       |   |   progressGraph.template.html
 |       |   |   sessionCtrls.template.html
-|       |   |   subMenu.template.html
 |       |   |   thisSave.template.html
 |       |   |   thisTitle.template.html
+|       |   |   wordCount.template.html
 |       |   |   
 |       |   \---options
 |       |           educationalExperience.template.html
@@ -70,18 +124,44 @@
 |   |   
 |   +---components
 |   |   |   about.component.js
+|   |   |   addAnother.component.js
+|   |   |   AddPicture.component.js
 |   |   |   app.component.js
 |   |   |   app.routes.js
 |   |   |   body.component.js
+|   |   |   container.component.js
+|   |   |   eraseContent.component.js
 |   |   |   formWrapper.component.js
 |   |   |   goback.component.js
+|   |   |   help.component.js
 |   |   |   home.component.js
+|   |   |   language.component.js
+|   |   |   progressGraph.component.js
 |   |   |   sessionCtrls.component.js
+|   |   |   style.component.js
 |   |   |   subMenu.component.js
 |   |   |   thisForm.component.js
 |   |   |   thisSave.component.js
 |   |   |   thisTitle.component.js
+|   |   |   wordCount.component.js
 |   |   |   
+|   |   +---body
+|   |   |       addAnother.component.js
+|   |   |       AddPicture.component.js
+|   |   |       app.component.js
+|   |   |       app.routes.js
+|   |   |       body.component.js
+|   |   |       container.component.js
+|   |   |       eraseContent.component.js
+|   |   |       goback.component.js
+|   |   |       help.component.js
+|   |   |       progressGraph.component.js
+|   |   |       sessionCtrls.component.js
+|   |   |       thisForm.component.js
+|   |   |       thisSave.component.js
+|   |   |       thisTitle.component.js
+|   |   |       wordCount.component.js
+|   |   |       
 |   |   +---footer
 |   |   |       footer.component.js
 |   |   |       
@@ -104,30 +184,37 @@
 |   |       config.js
 |   |       homeOptions.constant.js
 |   |       homepageOptions.constant.js
+|   |       languages.constant.js
+|   |       tooltipContent.constant.js
 |   |       
 |   \---services
 |           addRemoveClass.service.js
+|           help.service.js
+|           showDivs.service.js
+|           thisTitle.service.js
 |           
-|   |   |   |   |       message.js
-|   |   |   |   |       message.js.map
-|   |   |   |   |       dom_element_schema_registry.metadata.json
-|   |   |   |   |       dom_security_schema.d.ts
-|   |   |   |   |       dom_security_schema.js              
+
 +---src
 |   |   main.ts
 |   |   
 |   +---components
-|   |   |   app.component.ts
-|   |   |   app.routes.ts
-|   |   |   formWrapper.component.ts
-|   |   |   goback.component.ts
-|   |   |   sessionCtrls.component.ts
-|   |   |   subMenu.component.ts
-|   |   |   thisForm.component.ts
-|   |   |   thisSave.component.ts
-|   |   |   thisTitle.component.ts
-|   |   |   
 |   |   +---body
+|   |   |       addAnother.component.ts
+|   |   |       AddPicture.component.ts
+|   |   |       app.component.ts
+|   |   |       app.routes.ts
+|   |   |       body.component.ts
+|   |   |       container.component.ts
+|   |   |       eraseContent.component.ts
+|   |   |       goback.component.ts
+|   |   |       help.component.ts
+|   |   |       progressGraph.component.ts
+|   |   |       sessionCtrls.component.ts
+|   |   |       thisForm.component.ts
+|   |   |       thisSave.component.ts
+|   |   |       thisTitle.component.ts
+|   |   |       wordCount.component.ts
+|   |   |       
 |   |   +---footer
 |   |   |       footer.component.ts
 |   |   |       
@@ -142,6 +229,7 @@
 |   |           educationalExperience.component.ts
 |   |           employmentPreferences.component.ts
 |   |           groupAfilliations.component.ts
+|   |           index.d.ts
 |   |           personalInformation.component.ts
 |   |           privacySettings.component.ts
 |   |           professionalExperience.component.ts
@@ -149,10 +237,14 @@
 |   +---constants
 |   |       config.ts
 |   |       homeOptions.constant.ts
-|   |       homepageOptions.constant.ts
+|   |       languages.constant.ts
+|   |       tooltipContent.constant.ts
 |   |       
 |   \---services
 |           addRemoveClass.service.ts
+|           help.service.ts
+|           showDivs.service.ts
+|           thisTitle.service.ts
 |           
 \---typings
     |   browser.d.ts

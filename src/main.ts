@@ -8,6 +8,7 @@ import{ provide } from '@angular/core';
 // new location for locationStrategy and HashLocationStrategy
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { ShowDivs } from './services/showDivs.service';
+import { SetTemplate } from './services/setTemplate.service';
 
 bootstrap( AppComponent, [
 	APP_ROUTER_PROVIDERS,
@@ -15,7 +16,8 @@ bootstrap( AppComponent, [
 	disableDeprecatedForms(),
 	provideForms(),
 	provide(LocationStrategy, {useClass: HashLocationStrategy}),
-	ShowDivs
+	ShowDivs,
+	SetTemplate
 ])
 .catch(err=>{
 	console.error(err);
