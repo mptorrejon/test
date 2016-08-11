@@ -18,7 +18,7 @@ export class GetLanguage{
 		// console.log(ch);
 		// let that = this.ch;
 		let arr = this.lang.value;
-		console.log(this.lang.value.length);
+		// console.log(this.lang.value.length);
 
 		for(let i=0; i<arr.length; i++ ){
 			// console.log(arr);
