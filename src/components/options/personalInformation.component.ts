@@ -38,7 +38,7 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 		private view:ViewContainerRef,
 		private title: TitleService
 	){
-		this.firstname = new Control('', Validators.required);
+		// this.firstname = new Control('', Validators.required);
 
 		this.userForm = this.formBuilder.group({
 			'firstname': ['', Validators.required],
