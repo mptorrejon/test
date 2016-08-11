@@ -7,7 +7,8 @@ import { Language } from  '../body/container.component';
 import { Help } from '../body/help.component';
 import { WordCount } from '../body/wordCount.component';
 import { TitleService } from  '../../services/thisTitle.service';
-import { ValitionService } from '../../services/validationService.service';
+import { ValidationService } from '../../services/validationService.service';
+import {ControlMessages} from '../formValidation/controlMessages.component';
 
 let wrapper = '../../assets/styles/css/content.css';
 let form = "../../assets/styles/css/form.css";
@@ -23,32 +24,33 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 		AddAnother, 
 		Language, 
 		Help,
-		WordCount
+		WordCount,
+		ControlMessages
 	]
 })export class PersonalInformation{
 	userForm: any;
 	thisTitle:string="Default";
 	counter:number;
 
-	constructor( 
+	constructor(
 		private formBuilder: FormBuilder, 
 		private show:ShowDivs, 
 		private view:ViewContainerRef,
 		private title: TitleService
 	){
 		this.userForm = this.formBuilder.group({
-			'firstname': ['', Validators.required],
-			'lastname': ['', Validators.required /*, some callback to a service to custom validator*/],
-			'title': ['', Validators.required],
-			'location': ['', Validators.required],
-			'relocate': ['', Validators.required],
-			'fldPractice':['', Validators.required],
-			'language': ['', Validators.required],
-			'phone': ['', Validators.required],
-			'email': ['', Validators.required],
-			'npi': ['', Validators.required],
-			'stateLic': ['', Validators.required],
-			'statement': ['', Validators.required]
+			'firstname': [ '', ValidationService.Firstname ],
+			'lastname': [ '', ValidationService.Lastname ],
+			'title': [ '', ValidationService.Title ],
+			'location': [ '', ValidationService.Location ],
+			'relocate': [ '', Validators.required ],
+			'fldPractice':[ '', Validators.required ],
+			'language': [ '', Validators.required ],
+			'phone': [ '', Validators.required ],
+			'email': [ '', ValidationService.emailValidator ],
+			'npi': [ '', Validators.required ],
+			'stateLic': [ '', Validators.required ],
+			'statement': [ '', Validators.required ]
 		});
 		
 		title.thisTitle.subscribe(val=>{

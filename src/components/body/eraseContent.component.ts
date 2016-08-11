@@ -1,3 +1,7 @@
+/*
+	TODO
+		+ when clicked, fire focus event on input that has been applied
+*/
 import {Component} from '@angular/core';
 
 @Component({

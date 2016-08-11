@@ -1,6 +1,7 @@
 import { Component, Input, Output } from '@angular/core';
 import { SetTemplate } from '../../services/setTemplate.service';
 import { Subscription } from 'rxjs/Subscription';
+import { GetLanguage } from '../../services/getLanguage.service';
 
 @Component({
 	selector: 'container',
@@ -11,14 +12,16 @@ export class Language{
 	@Output() languageType:boolean;
 	@Output() stateType:boolean;
 	subscription:Subscription;
+	langSub:Subscription;
 
-	constructor( private setTemplate:SetTemplate ){}
+	constructor( private setTemplate:SetTemplate, private lang:GetLanguage ){}
 
 	ngOnInit(){
 		this.subscription = this.setTemplate.languageShow.subscribe(t=>{	
 			this.languageType = t.language;
 			this.stateType = t.state;
 		});
+		this.langSub = this.lang.thisLang.subscribe();
 
 		if( this.type == "language" ){
 			this.languageType = true;
@@ -27,5 +30,10 @@ export class Language{
 			this.stateType = true;
 			this.languageType = false
 		}
+	}
+	callService(event){
+		// console.log( event.key );
+		this.lang.getLanguage( event.key );
+		// console.log(resp.subscribe());
 	}
 }
