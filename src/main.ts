@@ -1,7 +1,7 @@
 /// <reference path="../typings/globals/es6-shim/index.d.ts" />
 import { bootstrap }    from '@angular/platform-browser-dynamic';
-import { APP_ROUTER_PROVIDERS } from './components/app.routes';
-import { AppComponent } from './components/app.component';
+import { APP_ROUTER_PROVIDERS } from './components/body/app.routes';
+import { AppComponent } from './components/body/app.component';
 // import { FormlyProviders } from 'ng2-formly';
 import { disableDeprecatedForms, provideForms } from '@angular/forms';
 import{ provide } from '@angular/core';

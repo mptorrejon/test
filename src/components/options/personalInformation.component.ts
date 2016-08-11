@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output, Input, ContentChildren,ViewChild, ViewContainerRef } from '@angular/core';
-import { FORM_DIRECTIVES, FormBuilder, Validators, Control} from '@angular/common';
-
+import { REACTIVE_FORM_DIRECTIVES, FormBuilder, Validators} from '@angular/forms';
 import { EraseContent } from '../body/eraseContent.component';
 import { ShowDivs } from '../../services/showDivs.service';
 import { AddAnother } from '../body/addAnother.component';
@@ -19,7 +18,7 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 	templateUrl: personalInformationTemplate,
 	styleUrls: [ wrapper, form, switchToggle ],
 	directives: [
-		FORM_DIRECTIVES, 
+		REACTIVE_FORM_DIRECTIVES, 
 		EraseContent, 
 		AddAnother, 
 		Language, 
@@ -30,7 +29,6 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 	userForm: any;
 	thisTitle:string="Default";
 	counter:number;
-	firstname:Control;
 
 	constructor( 
 		private formBuilder: FormBuilder, 
@@ -38,8 +36,6 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 		private view:ViewContainerRef,
 		private title: TitleService
 	){
-		this.firstname = new Control('', Validators.required);
-
 		this.userForm = this.formBuilder.group({
 			'firstname': ['', Validators.required],
 			'lastname': ['', Validators.required /*, some callback to a service to custom validator*/],
@@ -54,7 +50,7 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 			'stateLic': ['', Validators.required],
 			'statement': ['', Validators.required]
 		});
-
+		
 		title.thisTitle.subscribe(val=>{
 			this.thisTitle = val;
 		});

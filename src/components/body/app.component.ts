@@ -35,7 +35,7 @@ import { PersonalInformation } from '../options/personalInformation.component';
 export class AppComponent {
 	isHome:boolean;
 	subscription: Subscription;
-	t:string;
+	t;
 
 	constructor(
 		private show:ShowDivs, 

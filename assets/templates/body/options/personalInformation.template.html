@@ -8,37 +8,33 @@
 				have 'erase-content' be inside of input element
 				find out HOW???
 			 -->
-			<input 
-				formControlName="firstname" 
-				id="firstname" 
-				ngControl="firstname" 
-			/>
+			<input formControlName="firstname" id="firstname" />
 			<erase-content (click)="eraseContent('firstname')"></erase-content>
-			<div [hidden]="firstname.valid">Required</div>
+			<!-- <div [hidden]="firstname.valid">Required</div> -->
 		</div>
 		<!-- =======================LASTNAME========================== -->
 		<div class="col-xs-4">
 			<label for="lastname" >Lastname*</label><br>
-			<!-- <input formControlName="lastname" ngControl="lastname" /> -->
+			<input formControlName="lastname" ngControl="lastname" />
 			<erase-content (click)="eraseContent('lastname')"></erase-content>
 			<!-- <div [hidden]="lastname.valid">Required</div> -->
 		</div>
 		<!-- =======================TITLE========================== -->
 		<div class="col-xs-8">
 			<label>Professional Title</label><help type="title" ></help><br>
-			<!-- <input formControlName="title" ngControl="title" /> -->
+			<input formControlName="title" ngControl="title" />
 			<erase-content (click)="eraseContent('title')"></erase-content>
 		</div>
 		<!-- =======================LOCATION========================== -->
 		<div class="col-xs-8">
 			<label>Location</label><br>
-			<!-- <input formControlName="location" ngControl="location" /> -->
+			<input formControlName="location" ngControl="location" />
 			<erase-content (click)="eraseContent('location')"></erase-content> 
 		</div>
 		<!-- ========================RELOCATION===================== -->
 		<div class="col-xs-8">
 			<label class="switch"  >
-				<!-- <input type="checkbox" (click)="toggle($event)" checked> -->
+				<input type="checkbox" (click)="toggle($event)" checked>
 				<div class="slider round"></div>
 			</label>
 			<label class="switch-text">I am willing to relocate</label>
@@ -46,7 +42,7 @@
 		<!-- =======================FLD PRACTICE========================== -->
 		<div class="col-xs-8">
 			<label>Field of Practice</label> <help type="fldPractice" ></help><br>
-			<!-- <input formControlName="fldPractice" ngControl="fldPractice" /> -->
+			<input formControlName="fldPractice" ngControl="fldPractice" />
 		</div>
 		<!-- =======================LANGUAGES========================== -->
 		<div class="col-xs-8" >
@@ -56,19 +52,19 @@
 		<!-- =======================PHONE========================== -->
 		<div class="col-xs-8">
 			<label>Phone</label><br>
-			<!-- <input formControlName="phone" ngControl="phone" /> -->
+			<input formControlName="phone" ngControl="phone" />
 			<erase-content (click)="eraseContent('phone')"></erase-content>
 		</div>
 		<!-- =======================EMAIL========================== -->
 		<div class="col-xs-8">
 			<label>Email</label><br>
-			<!-- <input formControlName="email" ngControl="email" /> -->
+			<input formControlName="email" ngControl="email" />
 			<erase-content (click)="eraseContent('email')"></erase-content>
 		</div>
 		<!-- =======================NPI NUMBER========================== -->
 		<div class="col-xs-8">
 			<label>Individual NPI Number</label><help type="npi" ></help><br>
-			<!-- <input formControlName="npi" ngControl="npi" /> -->
+			<input formControlName="npi" ngControl="npi" />
 			<erase-content (click)="eraseContent('npi')"></erase-content>
 		</div>
 		<!-- =======================STATE LICENSE========================== -->
@@ -83,14 +79,14 @@
 
 		<div class="col-xs-8">
 			<label>Personal Statement</label><help type="statement" ></help><br>
-			<!-- <textarea 
+			<textarea 
 				rows="10" 
 				cols="58" 
 				maxlength="250"
 				formControlName="statement" 
 				ngControl="statement" 
 				(keydown)="UpdateCounter($event)">
-			</textarea> -->
+			</textarea>
 			<word-counter [count]="counter" ></word-counter>
 		</div>
 
