@@ -1,6 +1,6 @@
 <div class="container-wrapper" *ngIf="languageType">
 	<!-- <input formControlName="language" ngControl="language" class="col-xs-4"/> -->
-	<input class="col-xs-4"/>
+	<input class="col-xs-4" (keypress)="callService($event)"/>
 	<select class="col-xs-6">
 		<option>Choose One</option>
 		<option>Native</option>

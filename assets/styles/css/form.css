@@ -40,6 +40,10 @@
         top: 47px;
         text-align: center;
         font-size: 13px; }
+    :host form .col-xs-4 .form-error, :host form .col-xs-8 .form-error {
+      color: red;
+      font-size: 11px;
+      letter-spacing: 2px; }
   :host form .col-xs-4:first-child {
     margin-right: 30px; }
   :host form .col-xs-4 {

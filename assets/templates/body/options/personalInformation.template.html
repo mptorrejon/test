@@ -9,30 +9,60 @@
 				find out HOW???
 			 -->
 			<input 
-				formControlName="firstname" 
-				id="firstname"
-				ngControl="firstname" />
+				type="text"
+				maxlength="40"
+				formControlName="firstname"
+			/>
 			<erase-content (click)="eraseContent('firstname')"></erase-content>
-			<div [hidden]="userForm.controls.firstname.valid">Required</div>
+			<control-messages 
+				class="form-error" 
+				[control]="userForm.controls.firstname"
+			></control-messages>
 		</div>
+
 		<!-- =======================LASTNAME========================== -->
 		<div class="col-xs-4">
 			<label for="lastname" >Lastname*</label><br>
-			<input formControlName="lastname" ngControl="lastname" />
+			<input
+				type="text"
+				maxlength="40" 
+				formControlName="lastname"
+			/>
 			<erase-content (click)="eraseContent('lastname')"></erase-content>
-			<!-- <div [hidden]="lastname.valid">Required</div> -->
+			<control-messages 
+				class="form-error" 
+				[control]="userForm.controls.lastname"
+			></control-messages>
 		</div>
 		<!-- =======================TITLE========================== -->
 		<div class="col-xs-8">
 			<label>Professional Title</label><help type="title" ></help><br>
-			<input formControlName="title" ngControl="title" />
+			<input
+				type="text"
+				maxlength="50"
+				formControlName="title" 
+				ngControl="title"
+			/>
 			<erase-content (click)="eraseContent('title')"></erase-content>
+			<control-messages 
+				class="form-error" 
+				[control]="userForm.controls.title"
+			></control-messages>
 		</div>
 		<!-- =======================LOCATION========================== -->
 		<div class="col-xs-8">
 			<label>Location</label><br>
-			<input formControlName="location" ngControl="location" />
-			<erase-content (click)="eraseContent('location')"></erase-content> 
+			<input 
+				type="text"
+				max-length="50"
+				formControlName="location" 
+				ngControl="location" 
+			/>
+			<erase-content (click)="eraseContent('location')"></erase-content>
+			<control-messages 
+				class="form-error" 
+				[control]="userForm.controls.location"
+			></control-messages>
 		</div>
 		<!-- ========================RELOCATION===================== -->
 		<div class="col-xs-8">
@@ -63,6 +93,10 @@
 			<label>Email</label><br>
 			<input formControlName="email" ngControl="email" />
 			<erase-content (click)="eraseContent('email')"></erase-content>
+			<control-messages 
+				class="form-error" 
+				[control]="userForm.controls.email"
+			></control-messages>
 		</div>
 		<!-- =======================NPI NUMBER========================== -->
 		<div class="col-xs-8">
