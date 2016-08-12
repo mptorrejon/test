@@ -21,7 +21,7 @@ import { SetTemplate } from  '../../services/setTemplate.service';
 	@ViewChild('container', {read: ViewContainerRef}) container:ViewContainerRef;
 	@Input() type;
 	@Output() typeText:string="Default";
-	
+
 	constructor(
 		private view:ViewContainerRef,
 		private loader:DynamicComponentLoader,
@@ -47,5 +47,10 @@ import { SetTemplate } from  '../../services/setTemplate.service';
 			this.type = "state";
 			this.loader.loadNextToLocation(Language, this.container );
 		}
+		// // remove list and id attribute so each input and list are uni
+		// document.getElementsByClassName('languages')[0].setAttribute('list', '');
+		// document.getElementsByClassName('languages')[0].className = "";
+		// document.getElementsByClassName('list')[0].setAttribute('id', '');
+		// document.getElementsByClassName('list')[0].className = "";
 	}
 }

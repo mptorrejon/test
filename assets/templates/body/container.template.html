@@ -1,12 +1,16 @@
 <div class="container-wrapper" *ngIf="languageType">
 	<!-- <input formControlName="language" ngControl="language" class="col-xs-4"/> -->
-	<input list="languages" name="language" class="col-xs-4" (keyup)="callService($event)"/>
-	<datalist id="languages">
-		<option *ngFor="let val of langArr" value="{{val}}">
+	<input
+		[list]="divId"
+		name="language" 
+		class="col-xs-4"
+		(keyup)="callService($event)"
+		(click)="setProps($event)"
+	/>
+	<datalist [id]="divId">
+		<option *ngFor="let val of langArr" value="{{val}}">{{val}}</option>
 	</datalist>
-	<!-- <ul >
-		<li *ngFor="let val of langArr">{{val}}</li>
-	</ul> -->
+	
 	<select class="col-xs-6">
 		<option>Choose One</option>
 		<option>Native</option>
