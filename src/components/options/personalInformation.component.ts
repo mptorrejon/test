@@ -54,7 +54,7 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 			'stateLic': [ '', Validators.required ],
 			'statement': [ '', Validators.required ]
 		});
-		console.log(this.userForm);
+		// console.log(this.userForm);
 		
 		title.thisTitle.subscribe(val=>{
 			this.thisTitle = val;

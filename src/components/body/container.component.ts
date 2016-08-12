@@ -13,6 +13,7 @@ export class Language{
 	@Output() stateType:boolean;
 	subscription:Subscription;
 	langSub:Subscription;
+	langArr:Array<string>=[];
 
 	constructor( private setTemplate:SetTemplate, private lang:GetLanguage ){}
 
@@ -21,7 +22,7 @@ export class Language{
 			this.languageType = t.language;
 			this.stateType = t.state;
 		});
-		this.langSub = this.lang.thisLang.subscribe();
+		// this.langSub = this.lang.thisLang.subscribe();
 
 		if( this.type == "language" ){
 			this.languageType = true;
@@ -32,8 +33,7 @@ export class Language{
 		}
 	}
 	callService(event){
-		// console.log( event.key );
-		this.lang.getLanguage( event.key );
-		// console.log(resp.subscribe());
+		this.langArr = this.lang.getLanguage( event.srcElement.value.length, event.target.value );
+		console.log(this.langArr);
 	}
 }
