@@ -6,5 +6,5 @@ import {Component} from '@angular/core';
 
 @Component({
 	selector: 'erase-content',
-	template: '<span>X</span>'
+	template: '<span class="hide-erase-comp">X</span>'
 })export class EraseContent{}

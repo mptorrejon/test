@@ -12,6 +12,9 @@
 				type="text"
 				maxlength="40"
 				formControlName="firstname"
+				[class.error]="!userForm.controls.firstname.valid && userForm.controls.firstname.touched"
+				(click)="showEraseComp($event)"
+				(focusout)="focusOut($event)"
 			/>
 			<erase-content (click)="eraseContent('firstname')"></erase-content>
 			<control-messages 
@@ -27,6 +30,9 @@
 				type="text"
 				maxlength="40" 
 				formControlName="lastname"
+				[class.error]="!userForm.controls.lastname.valid && userForm.controls.lastname.touched"
+				(click)="showEraseComp($event)"
+				(focusout)="focusOut($event)"
 			/>
 			<erase-content (click)="eraseContent('lastname')"></erase-content>
 			<control-messages 
@@ -42,6 +48,9 @@
 				maxlength="50"
 				formControlName="title" 
 				ngControl="title"
+				[class.error]="!userForm.controls.title.valid && userForm.controls.title.touched"
+				(click)="showEraseComp($event)"
+				(focusout)="focusOut($event)"
 			/>
 			<erase-content (click)="eraseContent('title')"></erase-content>
 			<control-messages 
@@ -56,7 +65,8 @@
 				type="text"
 				max-length="50"
 				formControlName="location" 
-				ngControl="location" 
+				ngControl="location"
+				[class.error]="!userForm.controls.location.valid && userForm.controls.location.touched"				
 			/>
 			<erase-content (click)="eraseContent('location')"></erase-content>
 			<control-messages 
@@ -65,17 +75,36 @@
 			></control-messages>
 		</div>
 		<!-- ========================RELOCATION===================== -->
-		<div class="col-xs-8">
+		<!-- <div class="col-xs-8">
 			<label class="switch"  >
 				<input type="checkbox" (click)="toggle($event)" checked>
 				<div class="slider round"></div>
 			</label>
 			<label class="switch-text">I am willing to relocate</label>
+		</div> -->
+
+		<!-- ====================CURRENT BHW PROGRAM =================-->
+		<div class="col-xs-8">
+				<label>Current BHW Program</label><help type="title" ></help><br>
+				<input 
+					readonly
+					type="text"
+					formControlName="bhwProgram"
+					placeholder="Some sort of readonly text"
+				/>
+				<control-messages
+					class="form-error"
+					[control]="userForm.controls.bhwProgram"
+				>
+				</control-messages>
 		</div>
 		<!-- =======================FLD PRACTICE========================== -->
 		<div class="col-xs-8">
 			<label>Field of Practice</label> <help type="fldPractice" ></help><br>
-			<input formControlName="fldPractice" ngControl="fldPractice" />
+			<input 
+				formControlName="fldPractice" 
+				ngControl="fldPractice" 
+			/>
 		</div>
 		<!-- =======================LANGUAGES========================== -->
 		<div class="col-xs-8" >
@@ -128,7 +157,7 @@
 		</div>
 
 		<div class="col-xs-8 submit">
-			<button class="saveContinue">Save and Continue ></button>
+			<button class="saveContinue" (click)="saveAndContinue()">Save and Continue ></button>
 		</div>
 	</form>
 	<div class="horizontal-progress-bar">

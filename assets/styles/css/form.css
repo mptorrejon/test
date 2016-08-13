@@ -40,10 +40,16 @@
         top: 47px;
         text-align: center;
         font-size: 13px; }
+    :host form .col-xs-4 .show-erase-comp, :host form .col-xs-8 .show-erase-comp {
+      display: block; }
+    :host form .col-xs-4 .hide-erase-comp, :host form .col-xs-8 .hide-erase-comp {
+      display: none; }
     :host form .col-xs-4 .form-error, :host form .col-xs-8 .form-error {
       color: red;
       font-size: 11px;
       letter-spacing: 2px; }
+    :host form .col-xs-4 .error, :host form .col-xs-8 .error {
+      border: 1px solid red; }
   :host form .col-xs-4:first-child {
     margin-right: 30px; }
   :host form .col-xs-4 {
@@ -82,7 +88,7 @@
     display: block;
     margin: 0px auto; }
   :host .submit .saveContinue:hover {
-    border: 1px solid grey; }
+    background: lightgrey; }
 
 :host .horizontal-progress-bar {
   display: none;

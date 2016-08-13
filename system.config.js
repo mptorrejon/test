@@ -48,5 +48,6 @@
     }
 
     if (global.filterSystemConfig) { global.filterSystemConfig(config); }
+    console.log("aaa");
     System.config(config);
 })(this);

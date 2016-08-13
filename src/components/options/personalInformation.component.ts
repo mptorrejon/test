@@ -11,6 +11,7 @@ import { WordCount } from '../body/wordCount.component';
 import { TitleService } from  '../../services/thisTitle.service';
 import { ValidationService } from '../../services/validationService.service';
 import {ControlMessages} from '../formValidation/controlMessages.component';
+import { AddRemoveClass } from '../../services/addRemoveClass.service';
 
 let wrapper = '../../assets/styles/css/content.css';
 let form = "../../assets/styles/css/form.css";
@@ -38,14 +39,16 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 		private formBuilder: FormBuilder, 
 		private show:ShowDivs, 
 		private view:ViewContainerRef,
-		private title: TitleService
+		private title: TitleService,
+		private ARC:AddRemoveClass
 	){
 		this.userForm = this.formBuilder.group({
 			'firstname': [ '', ValidationService.Firstname ],
 			'lastname': [ '', ValidationService.Lastname ],
 			'title': [ '', ValidationService.Title ],
 			'location': [ '', ValidationService.Location ],
-			'relocate': [ '', Validators.required ],
+			// 'relocate': [ '', Validators.required ],
+			'bhwProgram': [''],
 			'fldPractice':[ '', Validators.required ],
 			'language': [ '', Validators.required ],
 			'phone': [ '', Validators.required ],
@@ -79,5 +82,22 @@ let personalInformationTemplate = '../../assets/templates/body/options/personalI
 	//updates textarea counter for max characters
 	UpdateCounter($event){
 		($event.keyCode==8)?this.counter -= 1:this.counter = $event.srcElement.textLength+1;
+	}
+	//toggles class of 'erase-cmp' to show/hide respectively
+	showEraseComp(event){
+		this.ARC.RemoveClass(event.srcElement.nextElementSibling.firstChild, "hide-erase-comp");
+		this.ARC.AddClass(event.srcElement.nextElementSibling.firstChild, "show-erase-comp");
+	}
+	focusOut(event){
+		let that = this;
+		// wait 1 ms so event does not disappear
+		setTimeout(function(){
+			that.ARC.RemoveClass(event.srcElement.nextElementSibling.firstChild, "show-erase-comp");
+			that.ARC.AddClass(event.srcElement.nextElementSibling.firstChild, "hide-erase-comp");	
+		}, 100);	
+	}
+
+	saveAndContinue(){
+		console.log( this.userForm );
 	}
 }

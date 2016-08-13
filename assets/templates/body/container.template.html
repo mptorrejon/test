@@ -1,7 +1,7 @@
 <div class="container-wrapper" *ngIf="languageType">
 	<!-- <input formControlName="language" ngControl="language" class="col-xs-4"/> -->
 	<input
-		[list]="divId"
+		[attr.list]="divId"
 		name="language" 
 		class="col-xs-4"
 		(keyup)="callService($event)"
